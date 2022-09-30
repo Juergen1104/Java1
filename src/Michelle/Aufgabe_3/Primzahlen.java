@@ -10,7 +10,7 @@ public class Primzahlen {
 
     static {
         StringBuffer sBuf = new StringBuffer();
-        try (BufferedReader bufR = new BufferedReader(new FileReader("primzahlen.txt"))){
+        try (BufferedReader bufR = new BufferedReader(new FileReader("src/Michelle/Aufgabe_3/primzahlen.txt"))){
             String line;
             while ((line = bufR.readLine()) != null){
                 sBuf.append(line);

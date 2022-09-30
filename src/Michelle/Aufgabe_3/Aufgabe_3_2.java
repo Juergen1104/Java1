@@ -5,6 +5,9 @@ public class Aufgabe_3_2 {
     public static void canPartition(int[] a) {
 
 
+        ausgeben(a);
+
+
     }
 
     public static void main(String[] args){
@@ -14,6 +17,14 @@ public class Aufgabe_3_2 {
         canPartition(a);
         canPartition(b);
         canPartition(c);
+    }
+
+    public static void ausgeben(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
     }
 
 }
