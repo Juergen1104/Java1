@@ -39,7 +39,6 @@ public class Aufgabe_3_3 {
             result = m[i][j];
         } catch (ArrayIndexOutOfBoundsException exception) {
             result = 0;
-            System.out.println("catched");
         }
 
 
@@ -53,36 +52,93 @@ public class Aufgabe_3_3 {
         // Default-Wert für Richtung, in der die Elemente aufeinanderfolgen, die das
         // maximale Produkt ergeben
         Richtung richtung = Richtung.HORIZONTAL;
+        int maximalWert = 0;
+        String richtungMaximalwert = "";
         int wertHorizontal = 0;
         int wertVertikal = 0;
-        int wertDIAGONAL_LR = 0;
-        int wertDIAGONAL_RL = 0;
+        int wertDiagonal_LR = 0;
+        int wertDiagonal_RL = 0;
+        int maxI = 0;
+        int maxJ = 0;
+
+        String ausgabe = "";
 
         for (int i = 0; i < mz.length; i++) {
             for (int j = 0; j < mz[i].length; j++) {
 
-                wertHorizontal = getValue(mz,i,j);
+                int geleseneZahl = getValue(mz, i, j);
 
-                System.out.println(wertHorizontal);
+                wertHorizontal = geleseneZahl;
+                wertVertikal = geleseneZahl;
+                wertDiagonal_LR = geleseneZahl;
+                wertDiagonal_RL = geleseneZahl;
 
-                for (int k = 1; k < n; k++) {
 
-                    wertHorizontal = wertHorizontal * getValue(mz, i, j + k);
-
-
-                    System.out.println(getValue(mz, i, j + k));
+                for (int h = 1; h < n; h++) {
+                    wertHorizontal = wertHorizontal * getValue(mz, i, j + h);
+                    wertVertikal = wertVertikal * getValue(mz, i + h, j);
+                    wertDiagonal_RL = wertDiagonal_RL * getValue(mz, i + h, j - h);
+                    wertDiagonal_LR = wertDiagonal_LR * getValue(mz, i + h, j + h);
                 }
 
-                System.out.println(wertHorizontal);
 
-                wertHorizontal=0;
-
+                if (wertHorizontal > maximalWert) {
+                    maximalWert = wertHorizontal;
+                    richtung = Richtung.HORIZONTAL;
+                    maxI = i;
+                    maxJ = j;
+                }
+                if (wertVertikal > maximalWert) {
+                    maximalWert = wertVertikal;
+                    richtung = Richtung.VERTIKAL;
+                    maxI = i;
+                    maxJ = j;
+                }
+                if (wertDiagonal_RL > maximalWert) {
+                    maximalWert = wertDiagonal_RL;
+                    richtung = Richtung.DIAGONAL_RL;
+                    maxI = i;
+                    maxJ = j;
+                }
+                if (wertDiagonal_LR > maximalWert) {
+                    maximalWert = wertDiagonal_LR;
+                    richtung = Richtung.DIAGONAL_LR;
+                    maxI = i;
+                    maxJ = j;
+                }
             }
+        }
+
+        int ausgabewert = getValue(mz, maxJ, maxJ);
+
+        String ausgabeFaktoren ="";
+
+
+        switch (richtung) {
+            case HORIZONTAL:
+                ausgabeFaktoren = getValue(mz,maxI, maxJ) + " = " + getValue(mz,maxI+1, maxJ)+" " + getValue(mz,maxI+2, maxJ) + getValue(mz,maxI+3, maxJ);
+                break;
+            case VERTIKAL:
+                 ausgabeFaktoren = getValue(mz,maxI, maxJ) + " = " + getValue(mz,maxI, maxJ+1)+" " + getValue(mz,maxI, maxJ+2) + getValue(mz,maxI, maxJ+3);
+                break;
+            case DIAGONAL_LR:
+                ausgabeFaktoren = getValue(mz,maxI, maxJ) + " = " + getValue(mz,maxI+1, maxJ+1)+" " + getValue(mz,maxI+2, maxJ+2) + getValue(mz,maxI+3, maxJ+3);
+                break;
+            case DIAGONAL_RL:
+                ausgabeFaktoren = getValue(mz,maxI, maxJ) + " = " + getValue(mz,maxI+1, maxJ-1)+" " + getValue(mz,maxI+2, maxJ-2) + getValue(mz,maxI+3, maxJ-3);
+                break;
+
 
         }
+
+        System.out.println(ausgabeFaktoren);
+
+
+
+        System.out.println(maximalWert);
+        System.out.println(richtung);
+        System.out.println(maxI + " " + maxJ);
     }
-
-
 }
 
 
