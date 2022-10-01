@@ -25,24 +25,18 @@ public class Aufgabe_3_3 {
 
     /* Richtung der Werte: horizontal, vertikal oder diagonal von links nach rechts
        bzw. rechts nach links */
-    public enum Richtung {HORIZONTAL, VERTIKAL, DIAGONAL_LR, DIAGONAL_RL}
-
-    ;
+    public enum Richtung {HORIZONTAL, VERTIKAL, DIAGONAL_LR, DIAGONAL_RL};
 
     /* Aufgabenteil (a) */
     // 1
     public static int getValue(int[][] m, int i, int j) {
 
         int result = 0;
-
-        try {
-            result = m[i][j];
-        } catch (ArrayIndexOutOfBoundsException exception) {
-            result = 0;
+        if ((j < 0) || (i > mz.length - 1) || j > mz[i].length - 1) {
+            return result;
         }
-
-
-        return result;
+            result=  m[i][j];
+            return result;
     }
 
     /* Aufgabenteil (b) */
@@ -53,7 +47,6 @@ public class Aufgabe_3_3 {
         // maximale Produkt ergeben
         Richtung richtung = Richtung.HORIZONTAL;
         int maximalWert = 0;
-        String richtungMaximalwert = "";
         int wertHorizontal = 0;
         int wertVertikal = 0;
         int wertDiagonal_LR = 0;
@@ -73,14 +66,12 @@ public class Aufgabe_3_3 {
                 wertDiagonal_LR = geleseneZahl;
                 wertDiagonal_RL = geleseneZahl;
 
-
                 for (int h = 1; h < n; h++) {
                     wertHorizontal = wertHorizontal * getValue(mz, i, j + h);
                     wertVertikal = wertVertikal * getValue(mz, i + h, j);
                     wertDiagonal_RL = wertDiagonal_RL * getValue(mz, i + h, j - h);
                     wertDiagonal_LR = wertDiagonal_LR * getValue(mz, i + h, j + h);
                 }
-
 
                 if (wertHorizontal > maximalWert) {
                     maximalWert = wertHorizontal;
@@ -108,36 +99,23 @@ public class Aufgabe_3_3 {
                 }
             }
         }
-
-        int ausgabewert = getValue(mz, maxJ, maxJ);
-
-        String ausgabeFaktoren ="";
-
+        String ausgabeFaktoren = "";
 
         switch (richtung) {
             case HORIZONTAL:
-                ausgabeFaktoren = getValue(mz,maxI, maxJ) + " = " + getValue(mz,maxI+1, maxJ)+" " + getValue(mz,maxI+2, maxJ) + getValue(mz,maxI+3, maxJ);
+                ausgabeFaktoren = maximalWert + " = " + getValue(mz, maxI, maxJ) + " * " + getValue(mz, maxI + 1, maxJ) + " *  " + getValue(mz, maxI + 2, maxJ) + " * " + getValue(mz, maxI + 3, maxJ);
                 break;
             case VERTIKAL:
-                 ausgabeFaktoren = getValue(mz,maxI, maxJ) + " = " + getValue(mz,maxI, maxJ+1)+" " + getValue(mz,maxI, maxJ+2) + getValue(mz,maxI, maxJ+3);
+                ausgabeFaktoren = maximalWert + " = " + getValue(mz, maxI, maxJ) + " * " + getValue(mz, maxI, maxJ + 1) + " * " + getValue(mz, maxI, maxJ + 2) + " * " + getValue(mz, maxI, maxJ + 3);
                 break;
             case DIAGONAL_LR:
-                ausgabeFaktoren = getValue(mz,maxI, maxJ) + " = " + getValue(mz,maxI+1, maxJ+1)+" " + getValue(mz,maxI+2, maxJ+2) + getValue(mz,maxI+3, maxJ+3);
+                ausgabeFaktoren = maximalWert + " = " + getValue(mz, maxI, maxJ) + " * " + getValue(mz, maxI + 1, maxJ + 1) + " * " + getValue(mz, maxI + 2, maxJ + 2) + " * " + getValue(mz, maxI + 3, maxJ + 3);
                 break;
             case DIAGONAL_RL:
-                ausgabeFaktoren = getValue(mz,maxI, maxJ) + " = " + getValue(mz,maxI+1, maxJ-1)+" " + getValue(mz,maxI+2, maxJ-2) + getValue(mz,maxI+3, maxJ-3);
+                ausgabeFaktoren = maximalWert + " = " + getValue(mz, maxI, maxJ) + " * " + getValue(mz, maxI + 1, maxJ - 1) + " * " + getValue(mz, maxI + 2, maxJ - 2) + " * " + getValue(mz, maxI + 3, maxJ - 3);
                 break;
-
-
         }
-
         System.out.println(ausgabeFaktoren);
-
-
-
-        System.out.println(maximalWert);
-        System.out.println(richtung);
-        System.out.println(maxI + " " + maxJ);
     }
 }
 

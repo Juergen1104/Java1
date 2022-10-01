@@ -23,7 +23,7 @@ public class Aufgabe_3_4 {
             deltaY = IOTools.readInteger("Blockgroesse y: ");
         } while ((deltaX < 2) || (deltaY < 2));
 
-        int[][] img = ImageTools.getImageDataFromFile("Lincoln2.png");
+        int[][] img = ImageTools.getImageDataFromFile("src/Michelle/Aufgabe_3/Lincoln2.png");
 
         blockify(img,deltaX,deltaY);
         ImageTools.writeImageDataToFile(img,"Blocks-" + deltaX + "-" + deltaY + ".png");
