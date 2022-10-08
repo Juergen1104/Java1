@@ -33,8 +33,10 @@ public class Klassenmethoden {
 
         int anzahlElemente = 0;
 
-        for (int i = 0; i < ff1.length; i++) {
-            for (int j = 0; j < ff1[i].length; j++) {
+        for (int[] ersteDimensiuon : ff1) {
+            for (int wert : ersteDimensiuon
+            ) {
+
                 anzahlElemente++;
             }
         }
@@ -50,12 +52,8 @@ public class Klassenmethoden {
                 zaehler++;
             }
         }
-
-
         return feld;
-
     }
-
 
     /*   Test */
     public static void main(String[] args) {

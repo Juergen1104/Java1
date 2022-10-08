@@ -1,11 +1,19 @@
 package Michelle.Aufgabe_4;
 
+import static Michelle.Aufgabe_4.LaenderDaten.getIntValue;
+
 class Groesse {
     public double wert;
     public String einheit;
 
     /* Aufgabenteil (a) */
     // 1
+
+    public Groesse(double wert, String einheit) {
+
+        this.wert=wert;
+        this.einheit=einheit;
+    }
 
 }
 
@@ -17,10 +25,22 @@ class Land {
     /* Aufgabenteil (b) */
     // 1.5
 
+    public Land(String [] feld) {
+
+        this.name=feld[0];
+        this.einwohner= getIntValue(feld[1]);
+        //todo
+    }
+
 
     /* Aufgabenteil (c) */
     // 1
 
+    public void printLand() {
+        System.out.println(name + ": ");
+        System.out.println(einwohner + "EW: ");
+        System.out.println(flaeche);
+    }
 
 }
 
@@ -29,6 +49,7 @@ public class Welt {
 
     /* Aufgabenteil (d) */
     // 1.5
+
 
 
     /* Aufgabenteil (e) */
