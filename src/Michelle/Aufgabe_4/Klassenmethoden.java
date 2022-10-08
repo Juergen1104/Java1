@@ -76,7 +76,7 @@ public class Klassenmethoden {
         System.out.println(b1 + " " + b2 + " " + b3 + ": " + mehrheit(b1, b2, b3));
 
 
-        System.out.println("\nAufgabenteil (b) ");
+        System.out.println("\nAufgabenteil (b) ");  //todo
         int k = 1;
         System.out.println("Anteil der Zahl " + k + ": ");
         //System.out.println("(1) " + Math.round(anteil(1))  +  "%");   0%
