@@ -14,15 +14,20 @@ public class Klassenmethoden {
     /* Aufgabenteil (b) */
     // 2
 
-    public static int anteil(int... werte) {
-        int gesamt = 0;
+    public static double anteil(int... werte) {
+        double gesamt = 0;
+        int haeufigkeit = 0;
+        int gesuchteZahl = 1;
 
         for (int x : werte) {
             gesamt += x;
+
+            if (x == gesuchteZahl) {
+                haeufigkeit++;
+            }
         }
-
-
-        return gesamt / werte.length;
+        double prozentHaeufigkeit = (haeufigkeit / werte.length) * 100;
+        return prozentHaeufigkeit;
     }
 
 
@@ -79,10 +84,10 @@ public class Klassenmethoden {
         System.out.println("\nAufgabenteil (b) ");  //todo
         int k = 1;
         System.out.println("Anteil der Zahl " + k + ": ");
-        //System.out.println("(1) " + Math.round(anteil(1))  +  "%");   0%
-        //System.out.println("(1) " + Math.round(anteil(1,1,2)) +  "%");  50%
-        //System.out.println("(2) " + Math.round(anteil(1,1,2,2,1)) +  "%"); 50 %
-        //System.out.println("(3) " + Math.round(anteil(1,1,2,2,1,1,3,2,3)) +  "%");   38%
+        System.out.println("(1) " + Math.round(anteil(1)) + "%");  // 0%
+        System.out.println("(1) " + Math.round(anteil(1,1,2)) +  "%");  //50%
+        System.out.println("(2) " + Math.round(anteil(1,1,2,2,1)) +  "%"); //50 %
+        System.out.println("(3) " + Math.round(anteil(1,1,2,2,1,1,3,2,3)) +  "%");   //38%
 
         System.out.println("\nAufgabenteil (c) ");
         int[][] ff1 = {{1}, {2, 3}, {4, 5, 6}, {7}, {}, {}, {8, 9, 10}};
