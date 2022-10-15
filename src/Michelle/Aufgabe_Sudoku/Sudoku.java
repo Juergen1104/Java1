@@ -30,8 +30,6 @@ public class Sudoku {
         }else {
             System.out.println("Fehlerhaft");
         }
-
-
     }
 
     public static boolean testRows(int[][] sudoku) {
@@ -142,6 +140,4 @@ public class Sudoku {
         } while (i < werte.length);
         System.out.println(row);
     }
-
-
 }

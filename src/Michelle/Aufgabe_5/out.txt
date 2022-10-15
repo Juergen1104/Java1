@@ -1,0 +1,608 @@
+Laender mit A: 10
+1. Argentina:
+   44938710 EW
+   2780400.0km^2
+2. Algeria:
+   43053050 EW
+   2381740.0km^2
+3. Angola:
+   31825290 EW
+   1246700.0km^2
+4. Australia:
+   25364310 EW
+   7741220.0km^2
+5. Azerbaijan:
+   10023320 EW
+   86600.0km^2
+6. Austria:
+   8877070 EW
+   83871.0km^2
+7. Armenia:
+   2957730 EW
+   29743.0km^2
+8. Albania:
+   2854190 EW
+   28748.0km^2
+9. Antigua and Barbuda:
+   97120 EW
+   443.0km^2
+10. Andorra:
+   77140 EW
+   468.0km^2
+Laender mit B: 17
+1. Brazil:
+   211049530 EW
+   8515770.0km^2
+2. Bangladesh:
+   163046160 EW
+   148460.0km^2
+3. Burkina Faso:
+   20321380 EW
+   274200.0km^2
+4. Benin:
+   11801150 EW
+   112622.0km^2
+5. Burundi:
+   11530580 EW
+   27830.0km^2
+6. Bolivia:
+   11513100 EW
+   1098581.0km^2
+7. Belgium:
+   11484060 EW
+   30528.0km^2
+8. Belarus:
+   9466860 EW
+   207600.0km^2
+9. Bulgaria:
+   6975760 EW
+   110879.0km^2
+10. Bosnia and Herzegovina:
+   3301000 EW
+   51197.0km^2
+11. Botswana:
+   2303700 EW
+   581730.0km^2
+12. Bahrain:
+   1641170 EW
+   760.0km^2
+13. Bhutan:
+   763090 EW
+   38394.0km^2
+14. Brunei:
+   433290 EW
+   5765.0km^2
+15. Belize:
+   390350 EW
+   22966.0km^2
+16. Bahamas:
+   389480 EW
+   13880.0km^2
+17. Barbados:
+   287020 EW
+   430.0km^2
+Laender mit C: 17
+1. China:
+   1397715000 EW
+   9596960.0km^2
+2. Colombia:
+   50339440 EW
+   1138910.0km^2
+3. Canada:
+   37589260 EW
+   9984670.0km^2
+4. Cameroon:
+   25876380 EW
+   475440.0km^2
+5. Cote d'Ivoire:
+   25716540 EW
+   322463.0km^2
+6. Chile:
+   18952040 EW
+   756102.0km^2
+7. Cambodia:
+   16486540 EW
+   181035.0km^2
+8. Chad:
+   15946880 EW
+   1284000.0km^2
+9. Cuba:
+   11333480 EW
+   110860.0km^2
+10. Czechia (Czech Republic):
+   10669710 EW
+   78867.0km^2
+11. Congo (Congo-Brazzaville):
+   5380510 EW
+   342000.0km^2
+12. Costa Rica:
+   5047560 EW
+   51100.0km^2
+13. Central African Republic:
+   4745190 EW
+   622984.0km^2
+14. Croatia:
+   4067500 EW
+   56594.0km^2
+15. Cyprus:
+   1198580 EW
+   9251.0km^2
+16. Comoros:
+   850890 EW
+   2235.0km^2
+17. Cabo Verde:
+   549930 EW
+   4033.0km^2
+Laender mit D: 5
+1. Democratic Republic of the Congo:
+   86790570 EW
+   2344858.0km^2
+2. Dominican Republic:
+   10738960 EW
+   48670.0km^2
+3. Denmark:
+   5818550 EW
+   43094.0km^2
+4. Djibouti:
+   973560 EW
+   23200.0km^2
+5. Dominica:
+   71810 EW
+   751.0km^2
+Laender mit E: 8
+1. Ethiopia:
+   112078730 EW
+   1104300.0km^2
+2. Egypt:
+   100388070 EW
+   1001450.0km^2
+3. Ecuador:
+   17373660 EW
+   283561.0km^2
+4. El Salvador:
+   6453550 EW
+   21041.0km^2
+5. Eritrea:
+   3213970 EW
+   117600.0km^2
+6. Equatorial Guinea:
+   1355990 EW
+   28051.0km^2
+7. Estonia:
+   1326590 EW
+   45228.0km^2
+8. Eswatini:
+   1148130 EW
+   17364.0km^2
+Laender mit F: 3
+1. France:
+   67059890 EW
+   643801.0km^2
+2. Finland:
+   5520310 EW
+   338145.0km^2
+3. Fiji:
+   889950 EW
+   18274.0km^2
+Laender mit G: 11
+1. Germany:
+   83132800 EW
+   357022.0km^2
+2. Ghana:
+   30417860 EW
+   238533.0km^2
+3. Guatemala:
+   16604030 EW
+   108889.0km^2
+4. Guinea:
+   12771250 EW
+   245857.0km^2
+5. Greece:
+   10716320 EW
+   131957.0km^2
+6. Georgia:
+   3720380 EW
+   69700.0km^2
+7. Gambia:
+   2347710 EW
+   11300.0km^2
+8. Gabon:
+   2172580 EW
+   267667.0km^2
+9. Guinea-Bissau:
+   1920920 EW
+   36125.0km^2
+10. Guyana:
+   782770 EW
+   214969.0km^2
+11. Grenada:
+   112000 EW
+   344.0km^2
+Laender mit H: 4
+1. Haiti:
+   11263080 EW
+   27750.0km^2
+2. Hungary:
+   9769950 EW
+   93028.0km^2
+3. Honduras:
+   9746120 EW
+   112090.0km^2
+4. Holy See:
+   825 EW
+   44.0km^2
+Laender mit I: 8
+1. India:
+   1366417750 EW
+   3287263.0km^2
+2. Indonesia:
+   270625570 EW
+   1904375.0km^2
+3. Iran:
+   82913910 EW
+   1648195.0km^2
+4. Italy:
+   60297400 EW
+   301340.0km^2
+5. Iraq:
+   39309780 EW
+   438317.0km^2
+6. Israel:
+   9053300 EW
+   21937.0km^2
+7. Ireland:
+   4941440 EW
+   70273.0km^2
+8. Iceland:
+   361310 EW
+   103000.0km^2
+Laender mit J: 3
+1. Japan:
+   126264930 EW
+   377915.0km^2
+2. Jordan:
+   10101690 EW
+   89342.0km^2
+3. Jamaica:
+   2948280 EW
+   10991.0km^2
+Laender mit K: 5
+1. Kenya:
+   52573970 EW
+   580387.0km^2
+2. Kazakhstan:
+   18513930 EW
+   2724900.0km^2
+3. Kyrgyzstan:
+   6456900 EW
+   199951.0km^2
+4. Kuwait:
+   4207080 EW
+   17818.0km^2
+5. Kiribati:
+   117610 EW
+   811.0km^2
+Laender mit L: 9
+1. Laos:
+   7169450 EW
+   236800.0km^2
+2. Lebanon:
+   6855710 EW
+   10400.0km^2
+3. Libya:
+   6777450 EW
+   1759540.0km^2
+4. Liberia:
+   4937370 EW
+   111369.0km^2
+5. Lithuania:
+   2786840 EW
+   65300.0km^2
+6. Lesotho:
+   2125270 EW
+   30355.0km^2
+7. Latvia:
+   1912790 EW
+   64589.0km^2
+8. Luxembourg:
+   619900 EW
+   2586.0km^2
+9. Liechtenstein:
+   38020 EW
+   160.0km^2
+Laender mit M: 18
+1. Mexico:
+   127575530 EW
+   1964375.0km^2
+2. Myanmar (formerly Burma):
+   54045420 EW
+   676578.0km^2
+3. Morocco:
+   36471770 EW
+   716550.0km^2
+4. Malaysia:
+   31949780 EW
+   329847.0km^2
+5. Mozambique:
+   30366040 EW
+   799380.0km^2
+6. Madagascar:
+   26969310 EW
+   587041.0km^2
+7. Mali:
+   19658030 EW
+   1240192.0km^2
+8. Malawi:
+   18628750 EW
+   118484.0km^2
+9. Mauritania:
+   4525700 EW
+   1030700.0km^2
+10. Mongolia:
+   3225170 EW
+   1564116.0km^2
+11. Moldova:
+   2657640 EW
+   33851.0km^2
+12. Mauritius:
+   1265710 EW
+   2040.0km^2
+13. Montenegro:
+   622140 EW
+   13812.0km^2
+14. Maldives:
+   530950 EW
+   298.0km^2
+15. Malta:
+   502650 EW
+   316.0km^2
+16. Micronesia:
+   113810 EW
+   702.0km^2
+17. Marshall Islands:
+   58790 EW
+   181.0km^2
+18. Monaco:
+   38960 EW
+   2.0km^2
+Laender mit N: 11
+1. Nigeria:
+   200963600 EW
+   923768.0km^2
+2. Nepal:
+   28608710 EW
+   147181.0km^2
+3. North Korea:
+   25666160 EW
+   120538.0km^2
+4. Niger:
+   23310720 EW
+   1267000.0km^2
+5. Netherlands:
+   17332850 EW
+   41543.0km^2
+6. Nicaragua:
+   6545500 EW
+   130370.0km^2
+7. Norway:
+   5347900 EW
+   323802.0km^2
+8. New Zealand:
+   4917000 EW
+   268838.0km^2
+9. Namibia:
+   2494530 EW
+   824292.0km^2
+10. North Macedonia:
+   2083460 EW
+   25713.0km^2
+11. Nauru:
+   12580 EW
+   21.0km^2
+Laender mit O: 1
+1. Oman:
+   4974990 EW
+   309500.0km^2
+Laender mit P: 9
+1. Pakistan:
+   216565320 EW
+   796095.0km^2
+2. Philippines:
+   108116620 EW
+   300000.0km^2
+3. Poland:
+   37970870 EW
+   312685.0km^2
+4. Peru:
+   32510450 EW
+   1285216.0km^2
+5. Portugal:
+   10269420 EW
+   92090.0km^2
+6. Papua New Guinea:
+   8776110 EW
+   462840.0km^2
+7. Paraguay:
+   7044640 EW
+   406752.0km^2
+8. Panama:
+   4246440 EW
+   75420.0km^2
+9. Palau:
+   18010 EW
+   459.0km^2
+Laender mit Q: 1
+1. Qatar:
+   2832070 EW
+   11586.0km^2
+Laender mit R: 3
+1. Russia:
+   144373540 EW
+   1.7098242E7km^2
+2. Romania:
+   19356540 EW
+   238391.0km^2
+3. Rwanda:
+   12626950 EW
+   26338.0km^2
+Laender mit S: 27
+1. South Africa:
+   58558270 EW
+   1219090.0km^2
+2. South Korea:
+   51709100 EW
+   99720.0km^2
+3. Spain:
+   47076780 EW
+   505370.0km^2
+4. Sudan:
+   42813240 EW
+   1861484.0km^2
+5. Saudi Arabia:
+   34268530 EW
+   2149690.0km^2
+6. Sri Lanka:
+   21803000 EW
+   65610.0km^2
+7. Syria:
+   17070130 EW
+   187437.0km^2
+8. Senegal:
+   16296360 EW
+   196722.0km^2
+9. Somalia:
+   15442910 EW
+   637657.0km^2
+10. South Sudan:
+   11062110 EW
+   644329.0km^2
+11. Sweden:
+   10285450 EW
+   450295.0km^2
+12. Switzerland:
+   8574830 EW
+   41277.0km^2
+13. Sierra Leone:
+   7813220 EW
+   71740.0km^2
+14. Serbia:
+   6944980 EW
+   77474.0km^2
+15. Singapore:
+   5703570 EW
+   719.0km^2
+16. Slovakia:
+   5454070 EW
+   49035.0km^2
+17. State of Palestine:
+   4685310 EW
+   6020.0km^2
+18. Slovenia:
+   2087950 EW
+   20273.0km^2
+19. Solomon Islands:
+   669820 EW
+   28896.0km^2
+20. Suriname:
+   581360 EW
+   163820.0km^2
+21. Sao Tome and Principe:
+   215060 EW
+   964.0km^2
+22. Samoa:
+   197100 EW
+   2831.0km^2
+23. Saint Lucia:
+   182790 EW
+   616.0km^2
+24. Saint Vincent and the Grenadines:
+   110590 EW
+   389.0km^2
+25. Seychelles:
+   97630 EW
+   455.0km^2
+26. Saint Kitts and Nevis:
+   52830 EW
+   261.0km^2
+27. San Marino:
+   33860 EW
+   61.0km^2
+Laender mit T: 11
+1. Turkey:
+   83429620 EW
+   783562.0km^2
+2. Thailand:
+   69625580 EW
+   513120.0km^2
+3. Tanzania:
+   58005460 EW
+   947300.0km^2
+4. Tunisia:
+   11694720 EW
+   163610.0km^2
+5. Tajikistan:
+   9321020 EW
+   144100.0km^2
+6. Togo:
+   8082370 EW
+   56785.0km^2
+7. Turkmenistan:
+   5942090 EW
+   488100.0km^2
+8. Trinidad and Tobago:
+   1394970 EW
+   5128.0km^2
+9. Timor-Leste:
+   1293120 EW
+   14874.0km^2
+10. Tonga:
+   104490 EW
+   747.0km^2
+11. Tuvalu:
+   11650 EW
+   26.0km^2
+Laender mit U: 7
+1. United States of America:
+   328239520 EW
+   9833517.0km^2
+2. United Kingdom:
+   66834400 EW
+   243610.0km^2
+3. Ukraine:
+   44385150 EW
+   603550.0km^2
+4. Uganda:
+   44269590 EW
+   241038.0km^2
+5. Uzbekistan:
+   33580650 EW
+   447400.0km^2
+6. United Arab Emirates:
+   9770530 EW
+   83600.0km^2
+7. Uruguay:
+   3461730 EW
+   176215.0km^2
+Laender mit V: 3
+1. Vietnam:
+   96462110 EW
+   331210.0km^2
+2. Venezuela:
+   28515830 EW
+   912050.0km^2
+3. Vanuatu:
+   299880 EW
+   12189.0km^2
+Laender mit W: 0
+Laender mit X: 0
+Laender mit Y: 1
+1. Yemen:
+   29161920 EW
+   527968.0km^2
+Laender mit Z: 2
+1. Zambia:
+   17861030 EW
+   752618.0km^2
+2. Zimbabwe:
+   14645470 EW
+   390757.0km^2
