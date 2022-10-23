@@ -34,7 +34,7 @@ class ZahlenWuerfel extends Wuerfel {
     public ZahlenWuerfel(int anzalSeiten) {
 
         super(0);
-        super.setNr(nummerDesWuerfels);
+        super.setNr(nummerDesWuerfels);  // wie kann ich die Nummer direkt mitgeben?
         nummerDesWuerfels++;
         this.anzahlSeiten = anzalSeiten;
     }
@@ -42,33 +42,26 @@ class ZahlenWuerfel extends Wuerfel {
     public void werfen() {
         wertWfuerfel = 1 + (int) (Math.random() * ((anzahlSeiten - 1) + 1));
     }
-
     public String toString() {
         return "Wuerfel Nr. " + getNr() + " (" + anzahlSeiten + " Seiten)  -> " + wertWfuerfel;
     }
 }
-
 /* *** Aufgabenteil (b) *** */
 // 4
 
 class Farbwuerfel extends Wuerfel {
-
     enum Color {SCHWARZ, ROT, GRUEN, BLAU};
     private static int nummerDesWuerfels = 1;
     private Color color = Color.SCHWARZ;
 
     public Farbwuerfel() {
         super(0);
-        super.setNr(nummerDesWuerfels);
-
-
+        super.setNr(nummerDesWuerfels);         //wie kann ich die Nummer direkt mitgeben?
+        nummerDesWuerfels++;
     }
 
     public void werfen() {
-
-
         int farbwert = 1 + (int) (Math.random() * ((4 - 1) + 1));
-
         switch (farbwert) {
 
             case 1:
