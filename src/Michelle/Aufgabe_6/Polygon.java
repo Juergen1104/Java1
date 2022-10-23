@@ -9,7 +9,6 @@ public class Polygon {
 
     /* ***  Aufgabenteil (b)  *** */
 
-
     public Polygon(){
 
     }
@@ -32,9 +31,6 @@ public class Polygon {
         this(polygon.ecken);
         this.farbe=polygon.farbe;
     }
-
-
-
     public Punkt[] getEcken() {
         return this.ecken;
     }

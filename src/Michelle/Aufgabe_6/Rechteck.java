@@ -17,14 +17,13 @@ class Rechteck extends Polygon {
 
         Rechteck r1 = new Rechteck(farbe, punkt);
         this.setFarbe(r1.getFarbe());
-        this.ecken=r1.ecken;
-
+        this.ecken = r1.ecken;
 
 
     }
 
     public Rechteck(Farbe farbe, Punkt[] ecken) {
-        super(farbe,ecken);
+        super(farbe, ecken);
 
     }
 
@@ -36,12 +35,15 @@ class Rechteck extends Polygon {
 
     public Rechteck(Rechteck rechteck) {
 
+        super(rechteck.ecken);
+        super.setFarbe(rechteck.getFarbe());
+
+
+
 
         //todo
 
     }
-
-
 
 
 }
