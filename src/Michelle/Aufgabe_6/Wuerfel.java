@@ -7,16 +7,18 @@ public class Wuerfel {
         this.nr = nr;
     }
 
-    public Wuerfel() {
-
-    }
-
-
     public void werfen() {
     }  // Methode macht nichts;
 
     public String toString() {
         return "Wuerfel Nr. " + nr;
+    }
+
+    public int getNr() {
+        return nr;
+    }
+    public void setNr(int nr){
+        this.nr=nr;
     }
 }
 
@@ -24,33 +26,73 @@ public class Wuerfel {
 // 4
 
 class ZahlenWuerfel extends Wuerfel {
-    private int anzahlSeiten = 6;
-    private int wert;
+    private int anzahlSeiten;
+    private int wertWfuerfel;
 
+    private static int nummerDesWuerfels = 1;
 
-    public ZahlenWuerfel() {
+    public ZahlenWuerfel(int anzalSeiten) {
 
-    }
-
-    public ZahlenWuerfel(int anzal) {
-
-
-        this.anzahlSeiten = anzal;
-        for (int i = 1; i < 4; i++) {
-
-            ZahlenWuerfel zahlenWuerfel = new ZahlenWuerfel(i);
-        }
+        super(0);
+        super.setNr(nummerDesWuerfels);
+        nummerDesWuerfels++;
+        this.anzahlSeiten = anzalSeiten;
     }
 
     public void werfen() {
-        int x = 1 + (int) (Math.random() * ((anzahlSeiten - 1) + 1));
+        wertWfuerfel = 1 + (int) (Math.random() * ((anzahlSeiten - 1) + 1));
+    }
+
+    public String toString() {
+        return "Wuerfel Nr. " + getNr() + " (" + anzahlSeiten + " Seiten)  -> " + wertWfuerfel;
+    }
+}
+
+/* *** Aufgabenteil (b) *** */
+// 4
+
+class Farbwuerfel extends Wuerfel {
+
+    enum Color {SCHWARZ, ROT, GRUEN, BLAU};
+    private static int nummerDesWuerfels = 1;
+    private Color color = Color.SCHWARZ;
+
+    public Farbwuerfel() {
+        super(0);
+        super.setNr(nummerDesWuerfels);
 
 
     }
 
+    public void werfen() {
+
+
+        int farbwert = 1 + (int) (Math.random() * ((4 - 1) + 1));
+
+        switch (farbwert) {
+
+            case 1:
+                color = Color.SCHWARZ;
+                break;
+            case 2:
+                color = Color.ROT;
+                break;
+            case 3:
+                color = Color.GRUEN;
+                break;
+            case 4:
+                color = Color.BLAU;
+                break;
+            default:
+                System.out.println("Wert  liegt nicht zwischen eins und vier");
+                break;
+        }
+    }
+
+    public String toString() {
+        return "Farb-Wuerfel Nr. " + getNr() + " -> " + color;
+    }
+
+
 }
-
-
-/* *** Aufgabenteil (b) *** */
-// 4
 
