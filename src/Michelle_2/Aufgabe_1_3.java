@@ -4,16 +4,16 @@ import static Michelle_2.IOTools.readInteger;
 
 public class Aufgabe_1_3 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         int seitenlaenge = readInteger("ganze Zahl eingeben: ");
 
         double flaeche = berechneFlaeche(seitenlaenge);
         double volumen = berechneVolumen(seitenlaenge);
 
-        System.out.println(seitenlaenge);
-        System.out.println(flaeche);
-        System.out.println(volumen);
+        System.out.println("Kantenlaenge -->  " + seitenlaenge);
+        System.out.println("Oberflaecheninhalt: " + flaeche);
+        System.out.println("Volumen: " + volumen);
 
 
     }

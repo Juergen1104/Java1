@@ -7,9 +7,8 @@ public class Aufgabe_1_4 {
     public static void main(String[] args) {
 
         int anzahlBits = eingabe();
-        System.out.println(anzahlBits);
 
-        int megabyte = anzahlBits / (1024 * 1024 * 8); // 1 Megabyte = 1024 Kilobyte, 1 Kilobyte = 1024 Byte
+        int megabyte = anzahlBits / (1024 * 1024 * 8);
         int rest1 = anzahlBits % (1024 * 1024 * 8);
 
         int kilobyte = rest1 / (1024 * 8);
@@ -25,7 +24,6 @@ public class Aufgabe_1_4 {
         double x = 0;
         do {
             x = readDouble("Zahl eingeben: ");
-            System.out.println(x);
         } while (x > 2147483647);
         return (int) x;
     }
