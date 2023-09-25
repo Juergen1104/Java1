@@ -6,6 +6,8 @@ public class Aufgabe_2_2 {
 
         long zahl;
 
+        // test
+
 
         
     }
