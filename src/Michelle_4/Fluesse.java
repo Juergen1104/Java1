@@ -1,7 +1,6 @@
 package Michelle_4;
 
-public class Fluss {
-
+class Fluss {
     public int laenge;
     public String name;
     public String kontinent;
