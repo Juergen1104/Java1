@@ -18,8 +18,6 @@ public class Aufgabe_3_2 {
                 if (diff > 50) {
                     diffImg[i][j] = diff;
                 }
-                K
-
             }
         }
         return diffImg;
