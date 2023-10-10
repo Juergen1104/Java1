@@ -19,6 +19,7 @@ public class Aufgabe_3_2 {
                     diffImg[i][j] = diff;
                 }
                 K
+
             }
         }
         return diffImg;
