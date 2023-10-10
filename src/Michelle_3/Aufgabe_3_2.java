@@ -13,14 +13,12 @@ public class Aufgabe_3_2 {
         for (int i = 0; i < h - 1; i++) {
             for (int j = 0; j < w - 1; j++) {
 
-                int a = img1[i][j];
-                int b = img2[i][j];
-
                 diff = Math.abs(img1[i][j] - img2[i][j]);
 
                 if (diff > 50) {
                     diffImg[i][j] = diff;
                 }
+                K
             }
         }
         return diffImg;
