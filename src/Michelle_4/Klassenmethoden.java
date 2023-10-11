@@ -39,8 +39,6 @@ public class Klassenmethoden {
         } else return false;
     }
 
-
-
     /* Aufgabenteil (b) */
     // Bestimmt die kleinste Zahl aus einem Intervall [a,b], die
     // nicht in einem Feld enthalten ist und gibt diese zurueck
