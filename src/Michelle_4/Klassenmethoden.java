@@ -36,7 +36,6 @@ public class Klassenmethoden {
 
         if (summe == zahl) {
             return true;
-            K
         } else return false;
     }
 
