@@ -39,14 +39,13 @@ public class FlussListe {
         head.next = newEle;
     }
 
-    /* *** Aufgabe 3a *** */
+    // Aufgabe 3a *** */
     // filtert alle Fluesse mit einer bestimmten Muendung aus
     // der Liste und speichert sie in einer Ergebnisliste,
     // die am Ende zurueckgegeben wird
     // Hinweis: Vergleichen Sie zwei String-Werte s1 und s2 auf
     //          Gleichheit mit der Instanzmethode equals:
     //          s1.equals(s2)
-    // 3P
 
     public FlussListe filterNachMuendung(String muendung) {
         FlussListe filteredList = new FlussListe();
@@ -66,6 +65,7 @@ public class FlussListe {
     }
 
     /* *** Aufgabe 3d *** */
+
     // Die Methode generiert eine StringListe, die alle
     // Muendungen beinhaltet, die in einem der Fluesse
     // der aktuellen Flussliste vorkommen
