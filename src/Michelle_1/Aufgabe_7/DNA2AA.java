@@ -148,11 +148,6 @@ public class DNA2AA {
 
     int a = 8;
     return resultBuffer;
-
-
-
-
-
   }
 
   public static void main(String[] args) {
