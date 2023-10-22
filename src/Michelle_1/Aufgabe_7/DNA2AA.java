@@ -145,7 +145,14 @@ public class DNA2AA {
       }
       resultBuffer.append(amino + " - ");
     }
+
+    int a = 8;
     return resultBuffer;
+
+
+
+
+
   }
 
   public static void main(String[] args) {
