@@ -100,6 +100,7 @@ public class Aufgabe_2_4 {
                     helper = b;
                     b = c;
                     c = helper;
+
                     break;
                 default:
                     break;
