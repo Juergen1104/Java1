@@ -17,9 +17,9 @@ public class TestWuerfel {
 
     for (int i = 1; i < k + 1; i++) {
       System.out.println(i + ". Wurf");
-      for (int j = 0; j < wuerfel.length; j++) {
-        wuerfel[j].werfen();
-        System.out.println(wuerfel[j].toString());
+      for (Wuerfel value : wuerfel) {
+        value.werfen();
+        System.out.println(value.toString());
       }
     }
   }

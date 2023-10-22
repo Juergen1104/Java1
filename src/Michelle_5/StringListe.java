@@ -61,7 +61,15 @@ public class StringListe {
       StringListenelement newElement = new StringListenelement();
       newElement.data = str;
       newElement.next = head.next;
-      head.next = newElement;
+      if (head.data == null) {
+        head.next = newElement;
+      } else {
+        StringListenelement aktuellerHead = head;
+        while (aktuellerHead.next != null) {
+          aktuellerHead = aktuellerHead.next;
+        }
+        aktuellerHead.next = newElement;
+      }
     }
   }
 }
