@@ -65,6 +65,8 @@ public class FlussListe {
     }
 
     /* *** Aufgabe 3d *** */
+
+    // Test
     // Die Methode generiert eine StringListe, die alle
     // Muendungen beinhaltet, die in einem der Fluesse
     // der aktuellen Flussliste vorkommen
