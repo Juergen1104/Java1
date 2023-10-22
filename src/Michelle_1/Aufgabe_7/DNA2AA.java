@@ -51,7 +51,8 @@ public class DNA2AA {
         String replaceString = "";
 
         switch (s) {                // todo Umschlüsselung????
-            case "UUU", "UUC":
+            case "UUU":
+            case "UUC":
                 replaceString = "Phe";
                 break;
             case "UUA", "UUG", "CUU", "CUC", "CUA", "CUG":
