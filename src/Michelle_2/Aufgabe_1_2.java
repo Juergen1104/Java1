@@ -2,58 +2,49 @@ package Michelle_2;
 
 public class Aufgabe_1_2 {
 
-    public static void main(String[] args) {
-        int a = 1, b = 2, c = 3, d = 4;
+  public static void main(String[] args) {
+    int a = 1, b = 2, c = 3, d = 4;
 
+    /*  Aufgabenteil (a)
 
-        /*  Aufgabenteil (a)
+    */
 
-         */
+    // d % b + b % d;
+    System.out.println();
 
-        // d % b + b % d;
-        System.out.println();
+    a = 1;
+    b = 2;
+    c = 3;
+    d = 4; // reinitialisieren
 
+    /* Aufgabenteil (b)
 
-        a = 1;
-        b = 2;
-        c = 3;
-        d = 4; // reinitialisieren
+    */
+    // ++a + ++b + c++ + d++;
+    System.out.println();
 
+    a = 1;
+    b = 2;
+    c = 3;
+    d = 4; // reinitialisieren
 
-        /* Aufgabenteil (b)
+    /* Aufgabenteil (c)
 
-         */
-        // ++a + ++b + c++ + d++;
-        System.out.println();
+    */
 
+    // ((a + b * c) < (a * b + c)) ? (b / a) : (c / d);
+    System.out.println();
 
-        a = 1;
-        b = 2;
-        c = 3;
-        d = 4; // reinitialisieren
+    a = 1;
+    b = 2;
+    c = 3;
+    d = 4; // reinitialisieren
 
+    /*  Aufgabenteil (d)
 
-        /* Aufgabenteil (c)
+    */
 
-         */
-
-        // ((a + b * c) < (a * b + c)) ? (b / a) : (c / d);
-        System.out.println();
-
-
-        a = 1;
-        b = 2;
-        c = 3;
-        d = 4;  // reinitialisieren
-
-        /*  Aufgabenteil (d)
-
-         */
-
-        // ((a = b) != (d /=b));
-        System.out.println();
-
-
-    }
-
+    // ((a = b) != (d /=b));
+    System.out.println();
+  }
 }

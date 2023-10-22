@@ -1,3 +1,3 @@
 module JavaKurs {
-    requires java.desktop;
+  requires java.desktop;
 }

@@ -1,57 +1,63 @@
 package Michelle_1.Aufgabe_1;
 
 public class Aufgabe_1_2 {
-    public static void main(String[] args){
-        int a = 1, b = 2, c = 3, d = 4;
+  public static void main(String[] args) {
+    int a = 1, b = 2, c = 3, d = 4;
 
+    /*  Aufgabenteil (a)
 
-        /*  Aufgabenteil (a)
+    */
 
-         */
+    // a + b / c - d;
+    System.out.println(a + b / c - d);
 
-         //a + b / c - d;
-        System.out.println(a + b / c - d);
+    a = 1;
+    b = 2;
+    c = 3;
+    d = 4; // reinitialisieren
 
-        a = 1; b = 2; c = 3; d = 4; // reinitialisieren
+    /* Aufgabenteil (b)
 
+    */
+    // a + ++a + a++;
+    System.out.println("bla");
+    System.out.println(a);
+    System.out.println(++a);
+    System.out.println(a++);
 
-        /* Aufgabenteil (b)
+    a = 1;
+    b = 2;
+    c = 3;
+    d = 4; // reinitialisieren
 
-         */
-        // a + ++a + a++;
-        System.out.println("bla");
-        System.out.println(a);
-        System.out.println(++a);
-        System.out.println(a++);
+    /* Aufgabenteil (c)
 
-        a = 1; b = 2; c = 3; d = 4; // reinitialisieren
+    */
 
+    // c *= d /= ++a;
+    System.out.println();
 
-        /* Aufgabenteil (c)
+    a = 1;
+    b = 2;
+    c = 3;
+    d = 4; // reinitialisieren
 
-         */
+    /*  Aufgabenteil (d)
 
-        // c *= d /= ++a;
-        System.out.println();
+    */
 
-        a = 1; b = 2; c = 3; d = 4;  // reinitialisieren
+    // c != b + a || a + c > d;
+    System.out.println();
 
-        /*  Aufgabenteil (d)
+    a = 1;
+    b = 2;
+    c = 3;
+    d = 4; //  reinitialisieren
 
-         */
+    /* Aufgabenteil (e)
 
-        // c != b + a || a + c > d;
-        System.out.println();
-
-        a = 1; b = 2; c = 3; d = 4;      //  reinitialisieren
-
-        /* Aufgabenteil (e)
-
-         */
-        // (++a + ++b ==  d-- + --d) ? a : c;
-        System.out.println();
-
-
-    }
+    */
+    // (++a + ++b ==  d-- + --d) ? a : c;
+    System.out.println();
+  }
 }
-
