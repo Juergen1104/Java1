@@ -61,6 +61,7 @@ public class FlussListe {
             }
             current = current.next;
         }
+
         return filteredList;
     }
 
