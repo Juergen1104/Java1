@@ -54,66 +54,66 @@ public class DNA2AA {
       case "UUC":
         replaceString = "Phe";
         break;
-      case "UUA", "UUG", "CUU", "CUC", "CUA", "CUG":
-        replaceString = "Leu";
-        break;
-      case "AUU", "AUC", "AUA":
-        replaceString = "Ile";
-        break;
-      case "AUG":
-        replaceString = "Met";
-        break;
-      case "GUU", "GUC", "GUA", "GUG":
-        replaceString = "Val";
-        break;
-      case "UCU", "UCC", "UCA", "UCG", "AGU", "AGC":
-        replaceString = "Ser";
-        break;
-      case "CCU", "CCC", "CCA", "CCG":
-        replaceString = "Pro";
-        break;
-      case "ACU", "ACC", "ACA", "ACG":
-        replaceString = "Thr";
-        break;
-      case "GCC", "GCU", "GCA", "GCG":
-        replaceString = "Ala";
-        break;
-      case "UAU", "UAC":
-        replaceString = "Tyr";
-        break;
-      case "CAU", "CAC":
-        replaceString = "His";
-        break;
-      case "CAA", "CAG":
-        replaceString = "Gln";
-        break;
-      case "AAU", "AAC":
-        replaceString = "Asn";
-        break;
-      case "AAA", "AAG":
-        replaceString = "Lys";
-        break;
-      case "GAU", "GAC":
-        replaceString = "Asp";
-        break;
-      case "GAA", "GAG":
-        replaceString = "Glu";
-        break;
-      case "UGU", "UGC":
-        replaceString = "Cys";
-        break;
-      case "UGG":
-        replaceString = "Trp";
-        break;
-      case "CGU", "CGC", "CGA", "CGG", "AGA", "AGG":
-        replaceString = "Arg";
-        break;
-      case "GGU", "GGC", "GGA", "GGG":
-        replaceString = "Gly";
-        break;
-      case "UAA", "UAG", "UGA":
-        replaceString = "Stop";
-        break;
+        //      case "UUA", "UUG", "CUU", "CUC", "CUA", "CUG":
+        //        replaceString = "Leu";
+        //        break;
+        //      case "AUU", "AUC", "AUA":
+        //        replaceString = "Ile";
+        //        break;
+        //      case "AUG":
+        //        replaceString = "Met";
+        //        break;
+        //      case "GUU", "GUC", "GUA", "GUG":
+        //        replaceString = "Val";
+        //        break;
+        //      case "UCU", "UCC", "UCA", "UCG", "AGU", "AGC":
+        //        replaceString = "Ser";
+        //        break;
+        //      case "CCU", "CCC", "CCA", "CCG":
+        //        replaceString = "Pro";
+        //        break;
+        //      case "ACU", "ACC", "ACA", "ACG":
+        //        replaceString = "Thr";
+        //        break;
+        //      case "GCC", "GCU", "GCA", "GCG":
+        //        replaceString = "Ala";
+        //        break;
+        //      case "UAU", "UAC":
+        //        replaceString = "Tyr";
+        //        break;
+        //      case "CAU", "CAC":
+        //        replaceString = "His";
+        //        break;
+        //      case "CAA", "CAG":
+        //        replaceString = "Gln";
+        //        break;
+        //      case "AAU", "AAC":
+        //        replaceString = "Asn";
+        //        break;
+        //      case "AAA", "AAG":
+        //        replaceString = "Lys";
+        //        break;
+        //      case "GAU", "GAC":
+        //        replaceString = "Asp";
+        //        break;
+        //      case "GAA", "GAG":
+        //        replaceString = "Glu";
+        //        break;
+        //      case "UGU", "UGC":
+        //        replaceString = "Cys";
+        //        break;
+        //      case "UGG":
+        //        replaceString = "Trp";
+        //        break;
+        //      case "CGU", "CGC", "CGA", "CGG", "AGA", "AGG":
+        //        replaceString = "Arg";
+        //        break;
+        //      case "GGU", "GGC", "GGA", "GGG":
+        //        replaceString = "Gly";
+        //        break;
+        //      case "UAA", "UAG", "UGA":
+        //        replaceString = "Stop";
+        //        break;
     }
     return replaceString; // Dummy Return
   }
