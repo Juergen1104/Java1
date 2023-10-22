@@ -11,15 +11,22 @@ class Fluss {
     /* Konstruktor mit Parametern fuer alle Attribute */
     // 1
 
+    /**
+     * @param laenge
+     * @param name
+     * @param kontinent
+     * @param quellgebiet
+     * @param muendung
+     */
+
     public Fluss(int laenge, String name, String kontinent, String quellgebiet, String muendung) {
         this.laenge = laenge;
         this.name = name;
+
         this.kontinent = kontinent;
         this.quellgebiet = quellgebiet;
         this.muendung = muendung;
     }
-
-
 
     /* Methode gibt true zurueck, wenn der Fluss auf dem Kontinent
        ist, der durch den String k spezifiziert wird, ansonsten
@@ -30,9 +37,9 @@ class Fluss {
     }
 
     /* *** Aufgabe 3b *** */
-    /* Methode gibt zunaechst k Leerzeichen aus und dann
-       Namen und Laenge (in Klammern) des Flusses
-    */
+  /* Methode gibt zunaechst k Leerzeichen aus und dann
+     Namen und Laenge (in Klammern) des Flusses
+  */
     // 1
     public String toString(int anzahl) {
         if (anzahl < 0) {
@@ -56,6 +63,7 @@ public class Fluesse {
             int laenge = Integer.parseInt(Data.flussDaten[i][0]);
             String name = Data.flussDaten[i][1];
             String kontinent = Data.flussDaten[i][2];
+
             String quellgebiet = Data.flussDaten[i][3];
             String muendung = Data.flussDaten[i][4];
             Fluss fluss = new Fluss(laenge, name, kontinent, quellgebiet, muendung);

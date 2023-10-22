@@ -69,8 +69,8 @@ public class Klassenmethoden {
     }
 
     /* Aufgabenteil (c) */
-    /* Gibt ein Feld zurueck, welches die geraden Zahlen aus einem
-       der Methode als Parameter uebergebenen Feld enthaelt */
+  /* Gibt ein Feld zurueck, welches die geraden Zahlen aus einem
+  der Methode als Parameter uebergebenen Feld enthaelt */
     // 3
 
     public static int[] filterGerade(int[] eingabeFeld) {
@@ -81,7 +81,6 @@ public class Klassenmethoden {
                 anzahlGerade++;
             }
         }
-
 
         int[] geradeZahlen = new int[anzahlGerade];
         int index = 0;
@@ -100,8 +99,8 @@ public class Klassenmethoden {
     /* ********************************************************* */
 
     /* gibt den Inhalt des Felds a in der aktuellen Zeile aus
-       und trennt Elemente mit einem ,
-       Das Feld wird mit geschweiften Klammern umgeben */
+    und trennt Elemente mit einem ,
+    Das Feld wird mit geschweiften Klammern umgeben */
     public static void printFeld(int[] a) {
         System.out.print("{");
         for (int i = 0; i < a.length; i++) {
@@ -116,22 +115,17 @@ public class Klassenmethoden {
     public static void main(String[] args) {
 
         System.out.println("Aufgabenteil (a) ");
-        for (int n : new int[] {112, 153, 1634, 1643, 54748, 55555, 548834}) {
+        for (int n : new int[]{112, 153, 1634, 1643, 54748, 55555, 548834}) {
             if (istNarzistisch(n)) {
-                System.out.printf("%6d  ist eine narz. Zahl mit ",n);
+                System.out.printf("%6d  ist eine narz. Zahl mit ", n);
                 System.out.println(anzStellen(n) + " Stellen");
             }
         }
 
-
         System.out.println("\nAufgabenteil (b) ");
-        int[][] felder = {{},
-                          {1},
-                          {1,3,2,5,6,7,1},
-                          {4,2,1,5,6,8,2},
-                          {7,6,5,4,3,2,1}};
+        int[][] felder = {{}, {1}, {1, 3, 2, 5, 6, 7, 1}, {4, 2, 1, 5, 6, 8, 2}, {7, 6, 5, 4, 3, 2, 1}};
         for (int[] f : felder) {
-            int x = fehlendeZahl(f,1,7);
+            int x = fehlendeZahl(f, 1, 7);
 
             if (x != -1) {
                 System.out.print("Kleinste fehlende Zahl in dem Feld ");
@@ -144,11 +138,8 @@ public class Klassenmethoden {
             }
         }
 
-
         System.out.println("\nAufgabenteil (c) ");
-        int[][] felder2 = {{},
-                           {1},
-                           {1,2,3,4,5,6,7,8,9}};
+        int[][] felder2 = {{}, {1}, {1, 2, 3, 4, 5, 6, 7, 8, 9}};
         for (int[] f : felder2) {
             printFeld(f);
             int[] f2 = filterGerade(f);
