@@ -82,7 +82,6 @@ public class Aufgabe_2_4 {
             String action = nextSwap();
 //            System.out.println("vor  dem tausch Action = : " + action + " " + a + " " + b + " " + c);
             switch (action) {
-
                 case "ab":
                 case "ba":
                     helper = b;
