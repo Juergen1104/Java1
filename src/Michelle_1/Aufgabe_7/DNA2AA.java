@@ -146,13 +146,6 @@ public class DNA2AA {
       resultBuffer.append(amino + " - ");
     }
 
-
-
-
-
-
-
-
     return resultBuffer;
   }
 
