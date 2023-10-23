@@ -1,15 +1,6 @@
-package Michelle_5;
+package Semester_3.Aufgabe_4;
 
-public class FlussDaten {
-
-  public static Fluss[] createFlussFeld() {
-    Fluss[] fluesse = new Fluss[flussDaten.length];
-    int i = 0;
-    for (String[] row : flussDaten) {
-      fluesse[i++] = new Fluss(toInt(row[0]), row[1], row[2], row[3], row[4]);
-    }
-    return fluesse;
-  }
+public class Data {
 
   /* wandelt einen String in ein int um (falls moeglich) */
   public static int toInt(String s) {

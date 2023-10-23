@@ -1,4 +1,4 @@
-package Michelle_4;
+package Semester_3.Aufgabe_4;
 
 public class Rechnen {
 
