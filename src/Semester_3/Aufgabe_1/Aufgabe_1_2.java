@@ -1,4 +1,4 @@
-package Michelle_2;
+package Semester_3.Aufgabe_1;
 
 public class Aufgabe_1_2 {
 

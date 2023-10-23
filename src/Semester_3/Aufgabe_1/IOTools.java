@@ -1,8 +1,8 @@
-package Michelle_2;
+package Semester_3.Aufgabe_1;
 
 import java.io.*;
-import java.util.*;
 import java.math.*;
+import java.util.*;
 
 /**
  * Diese Klasse stellt einige einfache Methoden zum Einlesen von der Tastatur zur Verf&uuml;gung. Es

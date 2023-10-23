@@ -1,4 +1,4 @@
-package Michelle_2;
+package Semester_3.Aufgabe_1;
 
 import static Michelle_2.IOTools.readInteger;
 

@@ -1,8 +1,8 @@
-package Michelle_2;
-
-import Michelle_1.Aufgabe_2.IOTools;
+package Semester_3.Aufgabe_2;
 
 import static java.lang.String.valueOf;
+
+import Michelle_1.Aufgabe_2.IOTools;
 
 public class Aufgabe_2_2 {
 
