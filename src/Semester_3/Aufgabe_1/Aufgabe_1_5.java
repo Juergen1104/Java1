@@ -1,6 +1,6 @@
 package Semester_3.Aufgabe_1;
 
-import static Michelle_2.IOTools.readChar;
+import static Semester_3.Aufgabe_1.IOTools.readChar;
 
 public class Aufgabe_1_5 {
 

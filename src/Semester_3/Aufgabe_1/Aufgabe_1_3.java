@@ -1,6 +1,6 @@
 package Semester_3.Aufgabe_1;
 
-import static Michelle_2.IOTools.readInteger;
+import static Semester_3.Aufgabe_1.IOTools.readInteger;
 
 public class Aufgabe_1_3 {
 
