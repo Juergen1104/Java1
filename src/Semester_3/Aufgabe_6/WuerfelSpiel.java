@@ -1,4 +1,4 @@
-package Michelle_6;
+package Semester_3.Aufgabe_6;
 
 // 2
 class Wuerfel {

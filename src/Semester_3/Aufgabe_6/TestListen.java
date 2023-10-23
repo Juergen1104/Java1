@@ -1,4 +1,4 @@
-package Michelle_6;
+package Semester_3.Aufgabe_6;
 
 public class TestListen {
   public static void main(String[] args) {
