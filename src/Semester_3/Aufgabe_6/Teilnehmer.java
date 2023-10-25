@@ -32,6 +32,15 @@ class Teilnehmer {
 
   /* *** Aufgabe 2a *** */
 
+  public int compareTo(Teilnehmer teilnehmer) {
+
+    if (this.zeit > teilnehmer.zeit) {
+      return -1;
+    } else if (this.zeit < teilnehmer.zeit) {
+      return 1;
+    } else return 0; // gleiche Zeiten
+  }
+
   public int getKey() {
     return this.jahrgang;
   }
