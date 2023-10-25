@@ -20,6 +20,7 @@ public class TestListen {
     liste[0].print();
     System.out.println("------------------");
     liste[1].print();
+    System.out.println("------------------");
     liste[2].print();
   }
 }
