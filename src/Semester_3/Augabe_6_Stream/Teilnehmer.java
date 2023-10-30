@@ -22,6 +22,18 @@ class Teilnehmer {
     return this.zeit;
   }
 
+  public static int getCount() {
+    return count;
+  }
+
+  public int getStartNr() {
+    return startNr;
+  }
+
+  public int getJahrgang() {
+    return jahrgang;
+  }
+
   // String-Repraesentation fuer die Ausgabe eines Teilnehmers
   // name + (Startnr / Jahrgang) formatierte Zeit
   public String toString() {

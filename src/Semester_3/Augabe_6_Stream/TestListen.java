@@ -11,9 +11,22 @@ public class TestListen {
     List<Teilnehmer> teilnehmerNeu = Arrays.asList(teilnehmer);
 
     List<Teilnehmer> sortedTeilnehmer =
-        teilnehmerNeu.stream().sorted(Comparator.comparing(Teilnehmer::getZeit)).toList();
+        teilnehmerNeu.stream()
+            .sorted(
+                Comparator.comparing(Teilnehmer::getZeit).thenComparing(Teilnehmer::getJahrgang))
+            .toList();
 
     sortedTeilnehmer.forEach(System.out::println);
+
+    //    List<Student> sortedStudents = Arrays.stream(students)
+    //            .sorted(Comparator.comparing(Student::getGrade).reversed()
+    //                    .thenComparing(Student::getAge))
+    //            .collect(Collectors.toList());
+    //
+    //    for (Student student : sortedStudents) {
+    //      System.out.println(student.getName() + ", " + student.getGrade() + ", " +
+    // student.getAge());
+    //    }
 
     //    /* *** Aufgabe 2c *** */
     //
