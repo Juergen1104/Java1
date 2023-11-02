@@ -25,7 +25,31 @@ public class Alphabet {
   // 2
   public static String mapText(String text) {
 
-    return ""; // Dummy Return
+    StringBuilder result = new StringBuilder();
+
+    for (int i = 0; i < text.length(); i++) {
+      char currentChar = text.charAt(i);
+      boolean isReplaced = false;
+
+      for (String[] mapping : map) {
+
+        if (mapping[0].length() == 1) {
+          // 2-stellige Werte werden ignoriert. Keine Idee wie das besser geht
+
+          if (mapping[0].contains(String.valueOf(currentChar))) {
+            result.append(mapping[1]);
+            isReplaced = true;
+            break;
+          }
+        }
+      }
+
+      if (!isReplaced) {
+        result.append(currentChar);
+      }
+    }
+
+    return result.toString();
   }
 
   public static void main(String[] args) {

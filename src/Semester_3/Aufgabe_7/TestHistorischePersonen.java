@@ -32,6 +32,7 @@ public class TestHistorischePersonen {
     "Martin Luther King;US-amerikanischer Bürgrrechtler;19290115;19680404",
     "Nelson Mandela;Südafrikanischer Staatsmann;19180718;20131205",
     "Robert Koch;Deutscher Nediziner und Mikrobiologe;18431211;19100527",
-    "Alfred Bernhard Nobel;Chemiker und Erfinder;18331021;18961210"
+    "Alfred Bernhard Nobel;Chemiker und Erfinder;18331021;18961210",
+    "Max Mustermann;Musterbürger;20000101;20231030"
   };
 }
