@@ -31,6 +31,7 @@ public class TestHistorischePersonen {
     "Marie Curie;Physikerin und Chemikerin;18671107;19340704",
     "Martin Luther King;US-amerikanischer Bürgrrechtler;19290115;19680404",
     "Nelson Mandela;Südafrikanischer Staatsmann;19180718;20131205",
-    "Robert Koch;Deutscher Nediziner und Mikrobiologe;18431211;19100527"
+    "Robert Koch;Deutscher Nediziner und Mikrobiologe;18431211;19100527",
+    "Alfred Bernhard Nobel;Chemiker und Erfinder;18331021;18961210"
   };
 }
