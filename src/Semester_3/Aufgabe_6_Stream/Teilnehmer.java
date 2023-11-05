@@ -1,4 +1,4 @@
-package Semester_3.Augabe_6_Stream;
+package Semester_3.Aufgabe_6_Stream;
 
 class Teilnehmer {
   private static int count = 0;
