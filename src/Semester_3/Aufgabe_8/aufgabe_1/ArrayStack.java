@@ -35,7 +35,8 @@ public class ArrayStack implements Stack {
 
   @Override
   public Element[] toArray() {
-    return new Element[0];
+
+    return elements;
   }
 
   public int size() {

@@ -24,7 +24,17 @@ public class StudentElement extends Element {
     if (!(e2 instanceof Element)) {
       throw new RuntimeException("Parameter is not of type StudentElement");
     } else {
-      return 0;
+
+      StudentElement studentElement = StudentElement.class.cast(e2);
+
+      return toString().compareTo(e2.toString());
+
+      //      if ((studentElement.name.compareTo(name) == 0)
+      //          && (studentElement.matriculationNumber == matriculationNumber)) {
+      //        return 0;
+      //      }
+      //      ;
+      //      return 1;
     }
   }
 

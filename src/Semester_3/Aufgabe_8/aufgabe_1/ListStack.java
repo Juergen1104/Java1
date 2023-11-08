@@ -9,8 +9,9 @@ public class ListStack extends List implements Stack {
   @Override
   public boolean push(Element ele) {
 
-    if (size() > MAX_SIZE) {
+    if (size() < MAX_SIZE) {
       insertElementAt(ele, 0);
+
       return true;
     } else return false;
   }
@@ -20,7 +21,7 @@ public class ListStack extends List implements Stack {
     if (size() == 0) {
       return null;
     } else {
-      return removeElementAt(0);
+      return removeElementAt(1);
     }
   }
 
@@ -36,9 +37,9 @@ public class ListStack extends List implements Stack {
   @Override
   public Element[] toArray() {
 
-    Element[] elements = new Element[size() - 1];
+    Element[] elements = new Element[size()];
     for (int i = 0; i < size(); i++) {
-      elements[i] = getElementAt(i);
+      elements[i] = getElementAt(i + 1);
     }
     return elements;
   }
