@@ -1,6 +1,6 @@
-package Semester_3.Aufgabe_8.aufgabe_1;
+package p08.aufgabe_1;
 
-import Semester_3.Aufgabe_8.data.Element;
+import p08.data.Element;
 
 public class StudentElement extends Element {
   private String name;

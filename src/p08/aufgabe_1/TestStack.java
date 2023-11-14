@@ -1,7 +1,7 @@
-package Semester_3.Aufgabe_8.aufgabe_1;
+package p08.aufgabe_1;
 
-import Semester_3.Aufgabe_8.data.Element;
 import java.util.Arrays;
+import p08.data.Element;
 
 public class TestStack {
   public static void main(String[] args) {
