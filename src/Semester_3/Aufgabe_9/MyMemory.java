@@ -9,18 +9,37 @@ public class MyMemory extends JFrame {
   private ZaehlerLabel zaehlerVersuche, zaehlerPaare;
 
   public MyMemory() {
-    /* **************************************************** */
-    /*         Dummy Eintrag: muss geloescht werden         */
-    /* **************************************************** */
-    JLabel l = new JLabel("To be filled ............");
-    l.setFont(new Font(null, Font.BOLD, 24));
-    l.setBorder(BorderFactory.createEmptyBorder(20, 50, 20, 50));
-    this.getContentPane().add(l);
+
+    //  this.getContentPane().setLayout(new FlowLayout());
+    this.getContentPane().setLayout(new GridLayout(4, 6));
+
+    Resources.initFeld(kartenFeld);
+
+    for (int i = 0; i < kartenFeld.length; i++) {
+      for (int j = 0; j < kartenFeld[i].length; j++) {
+
+        Karte karte = kartenFeld[i][j];
+        KartenButton kb = new KartenButton(kartenFeld[i][j]);
+        this.getContentPane().add(kb);
+      }
+    }
+
+    JLabel fussziele = new JLabel("Anzahl Versuche: ");
+    fussziele.setFont(new Font(null, Font.BOLD, 24));
+    fussziele.setVerticalTextPosition(JLabel.BOTTOM);
+    // this.getContentPane().add(fussziele);
+
+    fussziele = new JLabel("Anzahl Paare: ");
+    fussziele.setFont(new Font(null, Font.BOLD, 24));
+    fussziele.setVerticalTextPosition(JLabel.BOTTOM);
+    // this.getContentPane().add(fussziele);
+
     /* **************************************************** */
 
     // initialisiert zufaellige Verteilung der Karten im KartenFeld
     Resources.initFeld(kartenFeld);
 
+    this.setTitle("Memory");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.pack();
     this.setVisible(true);
