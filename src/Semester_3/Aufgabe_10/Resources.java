@@ -6,21 +6,21 @@ public class Resources {
   /* Namen der verfuegbaren Bilddateien (im Unterverzeichnis)
    */
   public static String[] dateinamen = {
-    "bilder/bowl1.png",
-    "bilder/calendar.png",
-    "bilder/muffin.png",
-    "bilder/snowflake.png",
-    "bilder/sweet3.png",
-    "bilder/bowl2.png",
-    "bilder/globe2.png",
-    "bilder/rentier.png",
-    "bilder/sweet1.png",
-    "bilder/tree.png",
-    "bilder/bowl3.png",
-    "bilder/globe.png",
-    "bilder/shoe.png",
-    "bilder/sweet2.png",
-    "bilder/window.png",
+    "src/Semester_3/Aufgabe_10/bilder/bowl1.png",
+    "src/Semester_3/Aufgabe_10/bilder/calendar.png",
+    "src/Semester_3/Aufgabe_10/bilder/muffin.png",
+    "src/Semester_3/Aufgabe_10/bilder/snowflake.png",
+    "src/Semester_3/Aufgabe_10/bilder/sweet3.png",
+    "src/Semester_3/Aufgabe_10/bilder/bowl2.png",
+    "src/Semester_3/Aufgabe_10/bilder/globe2.png",
+    "src/Semester_3/Aufgabe_10/bilder/rentier.png",
+    "src/Semester_3/Aufgabe_10/bilder/sweet1.png",
+    "src/Semester_3/Aufgabe_10/bilder/tree.png",
+    "src/Semester_3/Aufgabe_10/bilder/bowl3.png",
+    "src/Semester_3/Aufgabe_10/bilder/globe.png",
+    "src/Semester_3/Aufgabe_10/bilder/shoe.png",
+    "src/Semester_3/Aufgabe_10/bilder/sweet2.png",
+    "src/Semester_3/Aufgabe_10/bilder/window.png",
   };
 
   public static ArrayList<Karte> alleKarten = new ArrayList<Karte>(dateinamen.length);

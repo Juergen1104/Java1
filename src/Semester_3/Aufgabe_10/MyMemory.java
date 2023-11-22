@@ -67,10 +67,18 @@ public class MyMemory extends JFrame {
 
   /* *** Aufgabe 1:  Listener generieren und registrieren *** */
   private void createListener() {
+
+    KartenListener kartenListener = new KartenListener(new ZaehlerLabel(), new ZaehlerLabel());
     Component[] buttons = buttonPanel.getComponents();
+
+    for (Component component : buttons) {
+      KartenButton kb = (KartenButton) component;
+      kb.addActionListener(kartenListener);
+    }
   }
 
   public static void main(String[] args) {
+
     MyMemory mm = new MyMemory();
   }
 }

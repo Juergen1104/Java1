@@ -132,6 +132,13 @@ public class TerminGUI extends JFrame {
     this.button2 = new JButton("Alle Termine anzeigen");
     button1.setBackground(color_2);
     button2.setBackground(color_2);
+
+    Button1Listener button1Listener = new Button1Listener();
+    Button2Listener button2Listener = new Button2Listener();
+
+    button1.addActionListener(button1Listener);
+    button2.addActionListener(button2Listener);
+
     buttonBox.add(button1);
     buttonBox.add(Box.createHorizontalStrut(10));
     buttonBox.add(button2);
@@ -206,6 +213,107 @@ public class TerminGUI extends JFrame {
     box.add(Box.createHorizontalGlue());
     box.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
     return box;
+  }
+
+  // Innere Klasse für ActionListener Datum
+  private class Button1Listener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+      int selectedTag = Integer.parseInt((String) tage.getSelectedItem());
+      int selectedMonat = monatText2Int((String) monate.getSelectedItem());
+      int selectedJahr = Integer.parseInt((String) jahre.getSelectedItem());
+      int selectedStunde = Integer.parseInt((String) stunden.getSelectedItem());
+      int selectedMinute = Integer.parseInt((String) minuten.getSelectedItem());
+      String enteredText = tField.getText();
+
+      Termin termin =
+          new Termin(
+              selectedJahr,
+              selectedMonat,
+              selectedTag,
+              selectedStunde,
+              selectedMinute,
+              enteredText);
+
+      tListe.addTermin(termin);
+
+      Termin termin1 = tListe.getTermin(tListe.getAnzahlTermine());
+
+      String x = termin1.toString();
+
+      textArea.setText("");
+      textArea.append("\n neuer Termin:\n\n");
+      textArea.append(x + "\n");
+
+      int a = 0;
+    }
+  }
+
+  private int monatText2Int(String selectedMonat) {
+
+    switch (selectedMonat) {
+      case "Januar":
+        return 1;
+      case "Februar":
+        return 2;
+
+      case "März":
+        return 3;
+      case "April":
+        return 4;
+      case "Mai":
+        return 5;
+      case "Juni":
+        return 6;
+      case "Juli":
+        return 7;
+      case "August":
+        return 8;
+      case "September":
+        return 9;
+      case "Oktober":
+        return 10;
+      case "November":
+        return 11;
+      case "Dezember":
+        return 12;
+      default:
+        return 99;
+    }
+  }
+
+  // Innere Klasse für ActionListener Datum
+  private class Button2Listener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+
+      textArea.setText("");
+
+      if (tListe.getAnzahlTermine() > 0) {
+        textArea.append("\n Termine:\n\n");
+        tListe.sortTermine();
+        for (int i = 1; i < tListe.getAnzahlTermine() + 1; i++) {
+          Termin termin = tListe.getTermin(i);
+          String terminAusgabe = termin.toString();
+          textArea.append(terminAusgabe + "\n");
+        }
+
+      } else {
+
+        textArea.append("\n keine Termine:\n\n");
+      }
+
+      tListe.sortTermine();
+      int anzahl = tListe.getAnzahlTermine();
+
+      for (int i = 1; i < anzahl + 1; i++) {
+
+        Termin termin = tListe.getTermin(i);
+        String x = termin.toString();
+
+        textArea.append(x + "\n");
+      }
+
+      int a = 0;
+    }
   }
 
   public static void main(String[] args) {

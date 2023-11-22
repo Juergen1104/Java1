@@ -14,7 +14,7 @@ public class Karte {
     try {
       this.bild = ImageIO.read(new File(filename));
     } catch (IOException e) {
-      System.out.println("Could not read filename");
+      System.out.println("Could not read filename: " + filename);
       e.printStackTrace();
     }
   }
