@@ -28,13 +28,167 @@ public class TerminGUI extends JFrame {
 
   /* *** Aufgabe 2: 1. Listenerklasse *** */
   // 3
+  private class Button1Listener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+      int selectedTag = Integer.parseInt((String) tage.getSelectedItem());
+      int selectedMonat = monatText2Int((String) monate.getSelectedItem());
+      int selectedJahr = Integer.parseInt((String) jahre.getSelectedItem());
+      int selectedStunde = Integer.parseInt((String) stunden.getSelectedItem());
+      int selectedMinute = Integer.parseInt((String) minuten.getSelectedItem());
+      String enteredText = tField.getText();
+
+      Termin termin =
+          new Termin(
+              selectedJahr,
+              selectedMonat,
+              selectedTag,
+              selectedStunde,
+              selectedMinute,
+              enteredText);
+
+      tListe.addTermin(termin);
+
+      Termin termin1 = tListe.getTermin(tListe.getAnzahlTermine());
+
+      String x = termin1.toString();
+
+      textArea.setText("");
+      textArea.append("\n neuer Termin:\n\n");
+      textArea.append(x + "\n");
+
+      int a = 0;
+    }
+  }
 
   /* *** Aufgabe 2: 2. Listenerklasse *** */
   // 3
+  // Innere Klasse für ActionListener Datum
+  private class Button2Listener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+      textArea.setText("");
+      if (tListe.getAnzahlTermine() > 0) {
+        textArea.append("\n Termine:\n\n");
+        tListe.sortTermine();
+        for (int i = 1; i < tListe.getAnzahlTermine() + 1; i++) {
+          Termin termin = tListe.getTermin(i);
+          String terminAusgabe = termin.toString();
+          textArea.append(terminAusgabe + "\n");
+        }
+      } else {
+        textArea.append("\n keine Termine:\n\n");
+      }
+    }
+  }
+
+  // ItemListener ComboBox Monats
+  private class MonatComboBoxListener implements ItemListener {
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+      if (e.getStateChange() == ItemEvent.SELECTED) {
+        String sMonat = (String) e.getItem();
+        int sJahr = Integer.parseInt((String) jahre.getSelectedItem());
+        int tageMonat = anzahlTageMonat(sJahr, sMonat);
+        Object saveTag = tage.getSelectedItem();
+        fillComboboxTage(tageMonat);
+        tage.setSelectedItem(saveTag);
+      }
+    }
+  }
 
   /* *** Aufgabe 2: Listener generieren und bei Buttons registrieren */
   // 1
-  private void createListener() {}
+
+  private class JahrComboBoxListener implements ItemListener {
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+      if (e.getStateChange() == ItemEvent.SELECTED) {
+        // String sJahr = (String) e.getItem();
+        int sJahr = Integer.parseInt((String) e.getItem());
+        String sMonat = (String) monate.getSelectedItem();
+        int tageMonat = anzahlTageMonat(sJahr, sMonat);
+        Object saveTag = tage.getSelectedItem();
+        fillComboboxTage(tageMonat);
+        tage.setSelectedItem(saveTag);
+      }
+    }
+  }
+
+  private int monatText2Int(String selectedMonat) {
+    switch (selectedMonat) {
+      case "Januar":
+        return 1;
+      case "Februar":
+        return 2;
+      case "März":
+        return 3;
+      case "April":
+        return 4;
+      case "Mai":
+        return 5;
+      case "Juni":
+        return 6;
+      case "Juli":
+        return 7;
+      case "August":
+        return 8;
+      case "September":
+        return 9;
+      case "Oktober":
+        return 10;
+      case "November":
+        return 11;
+      case "Dezember":
+        return 12;
+      default:
+        return 99;
+    }
+  }
+
+  private void fillComboboxTage(int tageMonat) {
+
+    tage.removeAllItems();
+
+    String[] days = new String[tageMonat];
+    for (int i = 1; i <= tageMonat; i++) {
+      tage.addItem(String.valueOf(i));
+    }
+  }
+
+  private int anzahlTageMonat(int sJahr, String sMonat) {
+    int anzahlTage = 0;
+    boolean istSchaltJahr = sJahr % 4 == 0 && (sJahr % 100 != 0 || sJahr % 400 == 0);
+
+    switch (sMonat) {
+      case "Januar":
+      case "März":
+      case "Mai":
+      case "Juli":
+      case "August":
+      case "Oktobeer":
+      case "Dezember":
+        anzahlTage = 31;
+        break;
+      case "Februar":
+        anzahlTage = istSchaltJahr ? 29 : 28;
+        break;
+      default:
+        anzahlTage = 30;
+        break;
+    }
+    return anzahlTage;
+  }
+
+  private void createListener() {
+
+    Button1Listener button1Listener = new Button1Listener();
+    Button2Listener button2Listener = new Button2Listener();
+
+    button1.addActionListener(button1Listener);
+    button2.addActionListener(button2Listener);
+
+    this.monate.addItemListener(new MonatComboBoxListener());
+    this.jahre.addItemListener(new JahrComboBoxListener());
+  }
 
   /* ********** ab hier nichts mehr aendern ********** */
 
@@ -99,13 +253,11 @@ public class TerminGUI extends JFrame {
     this.monate = new JComboBox<String>(months);
     this.monate.setBackground(color_1);
     this.monate.setMaximumSize(new Dimension(150, 30));
-    this.monate.addItemListener(new MonatComboBoxListener());
 
     // ********** ComboBox fuer Jahre **********
     String[] years = {"2023", "2024", "2025"};
     this.jahre = new JComboBox<String>(years);
     this.jahre.setBackground(color_1);
-    this.jahre.addItemListener(new JahrComboBoxListener());
     this.jahre.setMaximumSize(new Dimension(100, 30));
 
     // ********** ComboBox fuer Stunden **********
@@ -137,11 +289,11 @@ public class TerminGUI extends JFrame {
     button1.setBackground(color_2);
     button2.setBackground(color_2);
 
-    Button1Listener button1Listener = new Button1Listener();
-    Button2Listener button2Listener = new Button2Listener();
-
-    button1.addActionListener(button1Listener);
-    button2.addActionListener(button2Listener);
+    //    Button1Listener button1Listener = new Button1Listener();
+    //    Button2Listener button2Listener = new Button2Listener();
+    //
+    //    button1.addActionListener(button1Listener);
+    //    button2.addActionListener(button2Listener);
 
     buttonBox.add(button1);
     buttonBox.add(Box.createHorizontalStrut(10));
@@ -217,171 +369,6 @@ public class TerminGUI extends JFrame {
     box.add(Box.createHorizontalGlue());
     box.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
     return box;
-  }
-
-  // Innere Klasse für ActionListener Datum
-  private class Button1Listener implements ActionListener {
-    public void actionPerformed(ActionEvent e) {
-      int selectedTag = Integer.parseInt((String) tage.getSelectedItem());
-      int selectedMonat = monatText2Int((String) monate.getSelectedItem());
-      int selectedJahr = Integer.parseInt((String) jahre.getSelectedItem());
-      int selectedStunde = Integer.parseInt((String) stunden.getSelectedItem());
-      int selectedMinute = Integer.parseInt((String) minuten.getSelectedItem());
-      String enteredText = tField.getText();
-
-      Termin termin =
-          new Termin(
-              selectedJahr,
-              selectedMonat,
-              selectedTag,
-              selectedStunde,
-              selectedMinute,
-              enteredText);
-
-      tListe.addTermin(termin);
-
-      Termin termin1 = tListe.getTermin(tListe.getAnzahlTermine());
-
-      String x = termin1.toString();
-
-      textArea.setText("");
-      textArea.append("\n neuer Termin:\n\n");
-      textArea.append(x + "\n");
-
-      int a = 0;
-    }
-  }
-
-  private int monatText2Int(String selectedMonat) {
-
-    switch (selectedMonat) {
-      case "Januar":
-        return 1;
-      case "Februar":
-        return 2;
-
-      case "März":
-        return 3;
-      case "April":
-        return 4;
-      case "Mai":
-        return 5;
-      case "Juni":
-        return 6;
-      case "Juli":
-        return 7;
-      case "August":
-        return 8;
-      case "September":
-        return 9;
-      case "Oktober":
-        return 10;
-      case "November":
-        return 11;
-      case "Dezember":
-        return 12;
-      default:
-        return 99;
-    }
-  }
-
-  // Innere Klasse für ActionListener Datum
-  private class Button2Listener implements ActionListener {
-    public void actionPerformed(ActionEvent e) {
-
-      textArea.setText("");
-
-      if (tListe.getAnzahlTermine() > 0) {
-        textArea.append("\n Termine:\n\n");
-        tListe.sortTermine();
-        for (int i = 1; i < tListe.getAnzahlTermine() + 1; i++) {
-          Termin termin = tListe.getTermin(i);
-          String terminAusgabe = termin.toString();
-          textArea.append(terminAusgabe + "\n");
-        }
-      } else {
-        textArea.append("\n keine Termine:\n\n");
-      }
-
-      tListe.sortTermine();
-      int anzahl = tListe.getAnzahlTermine();
-      for (int i = 1; i < anzahl + 1; i++) {
-        Termin termin = tListe.getTermin(i);
-        String x = termin.toString();
-        textArea.append(x + "\n");
-      }
-    }
-  }
-
-  private class JahrComboBoxListener implements ItemListener {
-    @Override
-    public void itemStateChanged(ItemEvent e) {
-      if (e.getStateChange() == ItemEvent.SELECTED) {
-
-        // String sJahr = (String) e.getItem();
-        int sJahr = Integer.parseInt((String) e.getItem());
-
-        // int iJahr = Integer.parseInt(sJahr);
-
-        String sMonat = (String) monate.getSelectedItem();
-        int tageMonat = anzahlTageMonat(sJahr, sMonat);
-        fillComboboxTage(tageMonat);
-      }
-    }
-  }
-
-  // ItemListener ComboBox Monats
-  private class MonatComboBoxListener implements ItemListener {
-    @Override
-    public void itemStateChanged(ItemEvent e) {
-      if (e.getStateChange() == ItemEvent.SELECTED) {
-        String sMonat = (String) e.getItem();
-
-        int sJahr = Integer.parseInt((String) jahre.getSelectedItem());
-
-        int tageMonat = anzahlTageMonat(sJahr, sMonat);
-        fillComboboxTage(tageMonat);
-      }
-    }
-  }
-
-  private void fillComboboxTage(int tageMonat) {
-
-    tage.removeAllItems();
-
-    String[] days = new String[tageMonat];
-    for (int i = 1; i <= tageMonat; i++) {
-
-      tage.addItem(String.valueOf(i));
-
-      //  days[i - 1] = String.valueOf(i);
-    }
-
-    // this.tage = new JComboBox<String>(days);
-  }
-
-  private int anzahlTageMonat(int sJahr, String sMonat) {
-    int anzahlTage = 0;
-    boolean istSchaltJahr = sJahr % 4 == 0 && (sJahr % 100 != 0 || sJahr % 400 == 0);
-
-    switch (sMonat) {
-      case "Januar":
-      case "März":
-      case "Mai":
-      case "Juli":
-      case "August":
-      case "Oktobeer":
-      case "Dezember":
-        anzahlTage = 31;
-        break;
-      case "Februar":
-        anzahlTage = istSchaltJahr ? 29 : 28;
-        break;
-      default:
-        anzahlTage = 30;
-        break;
-    }
-    return anzahlTage;
   }
 
   public static void main(String[] args) {

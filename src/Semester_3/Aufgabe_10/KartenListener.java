@@ -47,6 +47,5 @@ public class KartenListener implements ActionListener {
       buttons[count].setEnabled(false);
       count++;
     }
-    int a = 1;
   }
 }

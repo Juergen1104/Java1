@@ -2,6 +2,7 @@ package Semester_3.Aufgabe_10;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
 import javax.swing.*;
 
 public class ImageViewer extends JFrame {
@@ -23,7 +24,29 @@ public class ImageViewer extends JFrame {
   }
 
   /* *** Aufgabe 3 *** */
-  private void createMenu() {}
+  private void createMenu() {
+
+    JMenuBar menuBar = new JMenuBar();
+    JMenu fileMenu = new JMenu("File");
+    JMenuItem loadImageItem = new JMenuItem("Bild laden");
+
+    loadImageItem.addActionListener(
+        new ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+            JFileChooser fileChooser = new JFileChooser();
+
+            int result = fileChooser.showOpenDialog(ImageViewer.this);
+
+            if (result == JFileChooser.APPROVE_OPTION) {
+              File selectedFile = fileChooser.getSelectedFile();
+              ip.setImage(selectedFile);
+            }
+          }
+        });
+    fileMenu.add(loadImageItem);
+    menuBar.add(fileMenu);
+    setJMenuBar(menuBar);
+  }
 
   public static void main(String[] args) {
     ImageViewer iv = new ImageViewer();
