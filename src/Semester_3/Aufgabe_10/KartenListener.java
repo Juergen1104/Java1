@@ -23,13 +23,13 @@ public class KartenListener implements ActionListener {
       count++;
       return;
     }
-    zaehlerVersuche.increase(1);
+    this.zaehlerVersuche.increase(1);
 
     if (buttons[0].istPaar(buttons[1])) {
       // karten sind glecih
       buttons[0].entferneKarte();
       buttons[1].entferneKarte();
-      zaehlerPaare.increase(1);
+      this.zaehlerPaare.increase(1);
       count = 0;
       buttons[count] = (KartenButton) e.getSource();
       buttons[count].setEnabled(false);
