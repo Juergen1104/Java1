@@ -2,6 +2,8 @@ package Semester_3.Aufgabe_10;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.text.DecimalFormat;
 import javax.swing.*;
 
@@ -97,11 +99,13 @@ public class TerminGUI extends JFrame {
     this.monate = new JComboBox<String>(months);
     this.monate.setBackground(color_1);
     this.monate.setMaximumSize(new Dimension(150, 30));
+    this.monate.addItemListener(new MonatComboBoxListener());
 
     // ********** ComboBox fuer Jahre **********
     String[] years = {"2023", "2024", "2025"};
     this.jahre = new JComboBox<String>(years);
     this.jahre.setBackground(color_1);
+    this.jahre.addItemListener(new JahrComboBoxListener());
     this.jahre.setMaximumSize(new Dimension(100, 30));
 
     // ********** ComboBox fuer Stunden **********
@@ -295,25 +299,89 @@ public class TerminGUI extends JFrame {
           String terminAusgabe = termin.toString();
           textArea.append(terminAusgabe + "\n");
         }
-
       } else {
-
         textArea.append("\n keine Termine:\n\n");
       }
 
       tListe.sortTermine();
       int anzahl = tListe.getAnzahlTermine();
-
       for (int i = 1; i < anzahl + 1; i++) {
-
         Termin termin = tListe.getTermin(i);
         String x = termin.toString();
-
         textArea.append(x + "\n");
       }
-
-      int a = 0;
     }
+  }
+
+  private class JahrComboBoxListener implements ItemListener {
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+      if (e.getStateChange() == ItemEvent.SELECTED) {
+
+        // String sJahr = (String) e.getItem();
+        int sJahr = Integer.parseInt((String) e.getItem());
+
+        // int iJahr = Integer.parseInt(sJahr);
+
+        String sMonat = (String) monate.getSelectedItem();
+        int tageMonat = anzahlTageMonat(sJahr, sMonat);
+        fillComboboxTage(tageMonat);
+      }
+    }
+  }
+
+  // ItemListener ComboBox Monats
+  private class MonatComboBoxListener implements ItemListener {
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+      if (e.getStateChange() == ItemEvent.SELECTED) {
+        String sMonat = (String) e.getItem();
+
+        int sJahr = Integer.parseInt((String) jahre.getSelectedItem());
+
+        int tageMonat = anzahlTageMonat(sJahr, sMonat);
+        fillComboboxTage(tageMonat);
+      }
+    }
+  }
+
+  private void fillComboboxTage(int tageMonat) {
+
+    tage.removeAllItems();
+
+    String[] days = new String[tageMonat];
+    for (int i = 1; i <= tageMonat; i++) {
+
+      tage.addItem(String.valueOf(i));
+
+      //  days[i - 1] = String.valueOf(i);
+    }
+
+    // this.tage = new JComboBox<String>(days);
+  }
+
+  private int anzahlTageMonat(int sJahr, String sMonat) {
+    int anzahlTage = 0;
+    boolean istSchaltJahr = sJahr % 4 == 0 && (sJahr % 100 != 0 || sJahr % 400 == 0);
+
+    switch (sMonat) {
+      case "Januar":
+      case "März":
+      case "Mai":
+      case "Juli":
+      case "August":
+      case "Oktobeer":
+      case "Dezember":
+        anzahlTage = 31;
+        break;
+      case "Februar":
+        anzahlTage = istSchaltJahr ? 29 : 28;
+        break;
+      default:
+        anzahlTage = 30;
+        break;
+    }
+    return anzahlTage;
   }
 
   public static void main(String[] args) {
