@@ -23,7 +23,6 @@ public class KartenListener implements ActionListener {
       count++;
       return;
     }
-    this.zaehlerVersuche.increase(1);
 
     if (buttons[0].istPaar(buttons[1])) {
       // karten sind glecih
@@ -46,6 +45,7 @@ public class KartenListener implements ActionListener {
       buttons[count] = (KartenButton) e.getSource();
       buttons[count].setEnabled(false);
       count++;
+      this.zaehlerVersuche.increase(1);
     }
   }
 }
