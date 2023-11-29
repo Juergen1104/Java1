@@ -10,6 +10,9 @@ public class Hintergrundbild {
   private static final Shape dreieck2;
   private static final Shape quadrat;
   private static final Shape stern;
+  private static final Shape vogel;
+
+  private static final int anzahlFiguren = 8;
 
   static {
     GeneralPath p = new GeneralPath();
@@ -41,6 +44,16 @@ public class Hintergrundbild {
     p.closePath();
     stern = p;
 
+    p = new GeneralPath();
+    p.moveTo(50, 100);
+    p.lineTo(70, 94);
+    p.curveTo(100, 60, 140, 130, 160, 130);
+    p.lineTo(190, 90);
+    p.lineTo(200, 106);
+    p.quadTo(100, 200, 70, 110);
+    p.closePath();
+    vogel = p;
+
     quadrat = new Rectangle(0, 0, 3, 3);
   }
 
@@ -51,8 +64,8 @@ public class Hintergrundbild {
   // w und h geben die Groesse des einzuhaltenden (da sichtbaren)
   // Zeichenbereichs an
   public Hintergrundbild(int w, int h) {
-    this.teile = new Shape[7];
-    this.farben = new Color[7];
+    this.teile = new Shape[anzahlFiguren];
+    this.farben = new Color[anzahlFiguren];
 
     GeneralPath gp = new GeneralPath(dreieck);
     AffineTransform at = new AffineTransform();
@@ -101,6 +114,13 @@ public class Hintergrundbild {
     at.translate(150, 65);
     teile[6] = at.createTransformedShape(gp);
     farben[6] = Color.red;
+
+    gp = new GeneralPath(vogel);
+    at = new AffineTransform();
+    at.translate(175, 10);
+    //    at.scale(10, 5);
+    teile[7] = at.createTransformedShape(gp);
+    farben[7] = Color.orange;
 
     //        gp = new GeneralPath(quadrat);
     //        at = new AffineTransform();

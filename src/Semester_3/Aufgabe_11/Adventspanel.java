@@ -1,7 +1,6 @@
 package Semester_3.Aufgabe_11;
 
 import java.awt.*;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
@@ -21,7 +20,7 @@ public class Adventspanel extends JPanel {
   private Hintergrundbild hintergrundbild = new Hintergrundbild(w, h);
 
   public Adventspanel() {
-    this.addMouseListener(new MouseListener());
+    addMouseListener(new Mausereignisse());
     this.setPreferredSize(new Dimension(w, h));
     this.createTuerchen();
   }
@@ -91,9 +90,9 @@ public class Adventspanel extends JPanel {
     public void paint(Graphics g) {
       Graphics2D g2 = (Graphics2D) g;
       if (tuerchenOffen) {
-        // if (tuerchenOffen || this.oeffnenAm.getDayOfMonth() < 24) {
         g2.setColor(Color.white);
-        g2.drawImage(tuerchen[oeffnenAm.getDayOfMonth()].img, x, y, this.width, this.height, null);
+        g2.drawImage(
+            tuerchen[oeffnenAm.getDayOfMonth() - 1].img, x, y, this.width, this.height, null);
       } else {
 
         g2.setStroke(
@@ -109,10 +108,9 @@ public class Adventspanel extends JPanel {
 
   // Listener Klasse
   // 4*P
-  private class MouseListener extends MouseAdapter {
-
-    public void mausKlick(MouseEvent e) {
-
+  public class Mausereignisse implements MouseListener {
+    @Override
+    public void mouseClicked(MouseEvent e) {
       for (Tuerchen tuer : tuerchen) {
         if (tuer.contains(e.getPoint())) {
           tuer.tuerchenOffen = true;
@@ -121,5 +119,17 @@ public class Adventspanel extends JPanel {
         }
       }
     }
+
+    @Override
+    public void mousePressed(MouseEvent e) {}
+
+    @Override
+    public void mouseReleased(MouseEvent e) {}
+
+    @Override
+    public void mouseEntered(MouseEvent e) {}
+
+    @Override
+    public void mouseExited(MouseEvent e) {}
   }
 }
