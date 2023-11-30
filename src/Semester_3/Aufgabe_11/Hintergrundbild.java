@@ -11,8 +11,9 @@ public class Hintergrundbild {
   private static final Shape quadrat;
   private static final Shape stern;
   private static final Shape vogel;
+  private static final Shape fuss;
 
-  private static final int anzahlFiguren = 8;
+  private static final int anzahlFiguren = 10;
 
   static {
     GeneralPath p = new GeneralPath();
@@ -47,12 +48,19 @@ public class Hintergrundbild {
     p = new GeneralPath();
     p.moveTo(50, 100);
     p.lineTo(70, 94);
-    p.curveTo(100, 60, 140, 130, 160, 130);
+    p.curveTo(100, 60, 140, 130, 150, 130);
     p.lineTo(190, 90);
     p.lineTo(200, 106);
-    p.quadTo(100, 200, 70, 110);
+    p.quadTo(100, 200, 70, 90);
     p.closePath();
     vogel = p;
+
+    p = new GeneralPath();
+    p = new GeneralPath();
+    p.moveTo(120, 180);
+    p.quadTo(150, 120, 180, 180);
+    p.closePath();
+    fuss = p;
 
     quadrat = new Rectangle(0, 0, 3, 3);
   }
@@ -118,16 +126,20 @@ public class Hintergrundbild {
     gp = new GeneralPath(vogel);
     at = new AffineTransform();
     at.translate(175, 10);
-    //    at.scale(10, 5);
     teile[7] = at.createTransformedShape(gp);
     farben[7] = Color.orange;
 
-    //        gp = new GeneralPath(quadrat);
-    //        at = new AffineTransform();
-    //        at.translate(100, 390);
-    //        at.scale(5, 8);
-    //        teile[2] = at.createTransformedShape(gp);
-    //        farben[2] = Color.yellow;
+    gp = new GeneralPath(fuss);
+    at = new AffineTransform();
+    at.translate(175, 10);
+    teile[8] = at.createTransformedShape(gp);
+    farben[8] = Color.orange;
+
+    gp = new GeneralPath(fuss);
+    at = new AffineTransform();
+    at.translate(50, 415);
+    teile[9] = at.createTransformedShape(gp);
+    farben[9] = Color.green;
   }
 
   public void paint(Graphics g) {
