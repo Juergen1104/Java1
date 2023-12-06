@@ -5,40 +5,53 @@ public class RegEx {
   // Oktalzahl
   // 1
   public static boolean check1(String s) {
-    return false;
+
+    String regex = "[0-7]+";
+    return s != null && s.matches(regex);
   }
 
   // kein Leerzeichen, Tabulator, Zeilenumbruch oder andere Whitespace-Zeichen
   // 1
   public static boolean check2(String s) {
-    return false;
+
+    String regex = "\\S+";
+    return s != null && s.matches(regex);
   }
 
   // nur Buchstaben und Ziffern, aber mindestens ein Gross- und ein
   // Kleinbuchstabe sowie eine Ziffer
   // 1.5
   public static boolean check3(String s) {
-    return false;
+
+    String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]+$";
+    return s != null && s.matches(regex);
   }
 
   // ganze Zahl aus dem Intervall [-100,100]
   // 1.5
   public static boolean check4(String s) {
-    return false;
+
+    String regex1 = "^(0|-?[1-9]\\d?|100)$";
+    String regex = "^(-?[1-9]\\d?|100)$";
+    return s != null && s.matches(regex);
   }
 
   // mindestens ein (Groß- oder Klein-)Buchstabe , der mindestens
   // 3x vorkommt (immer als Klein- bzw. als Großbuchstabe)
   // 2
   public static boolean check5(String s) {
-    return false;
+
+    String regex = ".*([a-zA-Z])\\1\\1.*";
+    return s != null && s.matches(regex);
   }
 
   // genau vier Ziffern, dabei zwei verschiedene Ziffern,
   // die jeweils 2x auftreten
   // 2
   public static boolean check6(String s) {
-    return false;
+
+    String regex = "^(\\d)\\1(?!\\1)(\\d)\\2$";
+    return s != null && s.matches(regex);
   }
 
   public static void main(String[] args) {

@@ -34,20 +34,58 @@ public class Aufgabe_2 extends JFrame {
 
     ausgabe.setBorder(BorderFactory.createEmptyBorder(20, 10, 20, 10));
     JScrollPane scroller = new JScrollPane(ausgabe);
-    scroller.setPreferredSize(new Dimension(250, 185));
+    scroller.setPreferredSize(new Dimension(250, 400)); // vergroessert
     p2.add(scroller);
     c.add(p1, BorderLayout.NORTH);
     c.add(p2, BorderLayout.CENTER);
   }
 
+  private void anzeigenMonateTage() {
+
+    StringBuffer buffer = new StringBuffer();
+    int jahr = 0;
+
+    try {
+      jahr = Integer.parseInt(jahre.getText().trim());
+    } catch (NumberFormatException e) { // wenn man sich vertippt
+      buffer.append("Ungültige Eingabe!").append("\n");
+      ausgabe.setText(buffer.toString());
+      return;
+    }
+
+    buffer.append("Jahr: ").append(jahr).append("\n");
+    buffer.append("************").append("\n"); // hübscher
+    buffer.append(" ").append("\n");
+
+    for (Monat monat : Monat.values()) {
+      int tage = monat.getAnzahlTageMonat(jahr);
+      buffer.append(monat).append(": ").append(tage).append(" Tage\n");
+    }
+    ausgabe.setText(buffer.toString());
+  }
+
   private void createListener() {
     // Aufgabe 2b
     // 0.5 P
-
+    jahre.addKeyListener(new EingabeListener());
   }
 
   // Aufgabe 2b
   // 2.5 P
+  private class EingabeListener implements KeyListener {
+    @Override
+    public void keyTyped(KeyEvent e) {}
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+      if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+        anzeigenMonateTage();
+      }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {}
+  }
 
   public static void main(String[] args) {
     Aufgabe_2 a2 = new Aufgabe_2();
