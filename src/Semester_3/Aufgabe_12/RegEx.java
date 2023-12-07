@@ -6,7 +6,7 @@ public class RegEx {
   // 1
   public static boolean check1(String s) {
 
-    String regex = "[0-7]+";
+    String regex = "\\A0[0-7]*\\Z";
     return s != null && s.matches(regex);
   }
 
@@ -31,8 +31,9 @@ public class RegEx {
   // 1.5
   public static boolean check4(String s) {
 
-    String regex1 = "^(0|-?[1-9]\\d?|100)$";
-    String regex = "^(-?[1-9]\\d?|100)$";
+    String regex = "^[+-]?\\b(0|[1-9][0-9]?|100)\\b$";
+    // String regex1 = "^(0|-?[1-9]\\d?|100)$";
+    // String regex = "^(-?[1-9]\\d?|100)$";
     return s != null && s.matches(regex);
   }
 
@@ -41,7 +42,8 @@ public class RegEx {
   // 2
   public static boolean check5(String s) {
 
-    String regex = ".*([a-zA-Z])\\1\\1.*";
+    String regex = ".*([a-zA-Z]).*\\1.*\\1.*";
+    String regex1 = ".*([a-zA-Z])\\1\\1.*";
     return s != null && s.matches(regex);
   }
 
@@ -49,8 +51,8 @@ public class RegEx {
   // die jeweils 2x auftreten
   // 2
   public static boolean check6(String s) {
-
-    String regex = "^(\\d)\\1(?!\\1)(\\d)\\2$";
+    // 5566 wird nicht gematched
+    String regex = "^(\\d)(?!\\1)(\\d)(?:\\1\\2|\\2\\1)$";
     return s != null && s.matches(regex);
   }
 
