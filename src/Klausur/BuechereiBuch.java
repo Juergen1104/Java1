@@ -1,8 +1,6 @@
 package Klausur;
 
 import java.time.LocalDate;
-import java.time.DayOfWeek;
-import java.time.format.DateTimeFormatter;
 
 class BuechereiBuch extends Buch {
   private boolean ausgeliehen = false; // bei Initialisierung nicht ausgeliehen
